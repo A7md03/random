@@ -25,6 +25,16 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .footer-block__heading {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-heading-family);
+  }
+
+  .footer__content-bottom {
+    border-top: 3px solid rgba(var(--color-foreground), 0.2);
+  }
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -428,7 +438,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
+      "default": "scheme-4"
     },
     {
       "type": "header",

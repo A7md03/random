@@ -55,6 +55,10 @@
       "next_slide": "Slide right",
       "previous_slide": "Slide left",
       "name": "Slider"
+    },
+    "whatsapp": {
+      "chat_on_whatsapp": "Chat with us on WhatsApp",
+      "editor_reminder": "Add your WhatsApp number in Theme settings > WhatsApp to show this button to customers"
     }
   },
   "newsletter": {

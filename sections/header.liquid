@@ -81,6 +81,30 @@
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
   }
 
+  .header-wrapper--border-bottom {
+    border-bottom: 3px solid rgb(var(--color-foreground));
+  }
+
+  .header__heading-link,
+  .header__heading-link .h2 {
+    font-family: var(--font-heading-family);
+    letter-spacing: 0.03em;
+  }
+
+  .header .list-menu__item--link,
+  .header__menu-item {
+    text-transform: uppercase;
+    font-weight: var(--font-body-weight-bold);
+    letter-spacing: 0.05em;
+  }
+
+  .header .list-menu__item--link:hover {
+    text-decoration: underline;
+    text-decoration-color: #8a0303;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.4rem;
+  }
+
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
@@ -577,13 +601,13 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
+      "default": "scheme-4"
     },
     {
       "type": "color_scheme",
       "id": "menu_color_scheme",
       "label": "t:sections.header.settings.menu_color_scheme.label",
-      "default": "scheme-1"
+      "default": "scheme-4"
     },
     {
       "type": "header",

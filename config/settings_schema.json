@@ -1360,6 +1360,17 @@
     ]
   },
   {
+    "name": "t:settings_schema.whatsapp.name",
+    "settings": [
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "t:settings_schema.whatsapp.settings.whatsapp_number.label",
+        "info": "t:settings_schema.whatsapp.settings.whatsapp_number.info"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.search_input.name",
     "settings": [
       {

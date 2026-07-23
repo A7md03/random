@@ -4,12 +4,31 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "footer-brand": {
+          "type": "brand_information",
+          "settings": {
+            "brand_headline": "Many Things",
+            "brand_description": "<p>Custom-printed phone cases and stickers, made for how you actually use your phone. Designed in Dubai, shipped across the UAE.</p>",
+            "show_social": true
+          }
+        },
+        "footer-links": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "footer-brand",
+        "footer-links"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Join the Many Things list",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,

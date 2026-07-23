@@ -1,0 +1,29 @@
+{% comment %}
+  Renders a floating WhatsApp click-to-chat button, fixed bottom-right (bottom-left in RTL).
+  Renders nothing to real customers if settings.whatsapp_number is blank.
+  In the theme editor (request.design_mode), shows a reminder to merchants instead.
+
+  Accepts:
+  none - reads settings.whatsapp_number directly
+
+  Usage:
+  {% render 'whatsapp-button' %}
+{% endcomment %}
+
+{%- if settings.whatsapp_number != blank -%}
+  {%- assign whatsapp_digits = settings.whatsapp_number | remove: ' ' | remove: '+' | remove: '-' | remove: '(' | remove: ')' -%}
+  <a
+    href="https://wa.me/{{ whatsapp_digits }}"
+    class="whatsapp-float-button"
+    target="_blank"
+    rel="noopener"
+    aria-label="{{ 'general.whatsapp.chat_on_whatsapp' | t }}"
+  >
+    {% render 'icon-whatsapp' %}
+  </a>
+{%- elsif request.design_mode -%}
+  <div class="whatsapp-float-button whatsapp-float-button--editor-notice" role="note">
+    {% render 'icon-whatsapp' %}
+    <span class="whatsapp-float-button__editor-text">{{ 'general.whatsapp.editor_reminder' | t }}</span>
+  </div>
+{%- endif -%}

@@ -284,6 +284,15 @@
         }
       }
     },
+    "whatsapp": {
+      "name": "WhatsApp",
+      "settings": {
+        "whatsapp_number": {
+          "label": "WhatsApp number",
+          "info": "Include country code, e.g. 9715XXXXXXXX"
+        }
+      }
+    },
     "search_input": {
       "name": "Search behavior",
       "settings": {
