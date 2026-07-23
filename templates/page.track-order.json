@@ -1,0 +1,94 @@
+{
+  "sections": {
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Track My Order",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Where's my order?",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As soon as your order ships, we email you a shipping confirmation with a live tracking link for your courier - that email is the fastest way to see exactly where your package is.</p><p>You can also view the status of every order you've placed by signing in to your account below. If you checked out as a guest, use the order confirmation email instead.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "header_button1": "",
+            "button_label": "View my orders",
+            "button_link": "/account",
+            "button_style_secondary": false,
+            "header_button2": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 24
+      }
+    },
+    "whatsapp-fallback": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Can't find your tracking info?",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Message us on WhatsApp with your order number and we will look up your delivery status for you.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "header_button1": "",
+            "button_label": "Chat on WhatsApp",
+            "button_link": "https://wa.me/TODO_WHATSAPP_NUMBER",
+            "button_style_secondary": false,
+            "header_button2": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "whatsapp-fallback"
+  ]
+}

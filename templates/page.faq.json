@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How does the customization process work?",
+            "answer": "<p>Pick your phone model and case type, then upload your own image or choose one of our designs. You can preview how your case will look before you check out. For sticker sheets, choose a design and pack size - no upload needed.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "What materials are your cases and stickers made from?",
+            "answer": "<p>Our cases use durable, shock-absorbent polycarbonate and TPU with a scratch-resistant UV print. Stickers are printed on matte, waterproof vinyl built to handle sun and daily wear - see the Material & Care section on each product page for details.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take within the UAE?",
+            "answer": "<p>Custom orders are printed to order, so please allow 1-3 business days for production, then 1-3 business days for delivery across the UAE depending on your emirate. See our Shipping & Returns page for full details.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Can I change or cancel my order after I place it?",
+            "answer": "<p>Since every case is printed specifically for you, we can only make changes or cancellations within a few hours of ordering, before production starts. Message us on WhatsApp as soon as possible and we will do our best to help.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "Do you ship outside the UAE?",
+            "answer": "<p>Right now we focus on fast, reliable delivery within the UAE. If you are ordering from outside the UAE, message us on WhatsApp and we will let you know what is possible.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "question": "What if my case arrives damaged or doesn't fit?",
+            "answer": "<p>We double-check every order before it ships, but if something arrives damaged or the fit is wrong, contact us within 7 days with a photo and your order number and we will sort out a replacement or refund. See our Shipping & Returns page for the full policy.</p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "sections": {
+    "intro": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our Story",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "We make phones look like you",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Many Things (أشياء كتير) started in Dubai with one frustration: every phone case on the shelf looked the same. So we built a small, print-on-demand studio that turns bold artwork, memes, and custom photos into cases and stickers people actually want to show off.</p><p>Every order is printed to order, checked by hand, and shipped fast across the UAE.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop the collection",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text", "button"],
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "values": {
+      "type": "multicolumn",
+      "blocks": {
+        "value-1": {
+          "type": "column",
+          "settings": {
+            "title": "Made to order",
+            "text": "<p>Every case and sticker sheet is printed after you order it - no mass-produced warehouse stock, no guessing on designs.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "value-2": {
+          "type": "column",
+          "settings": {
+            "title": "Built for the UAE",
+            "text": "<p>Fast Dubai-based fulfilment and shipping across all seven emirates, with materials chosen to handle the heat.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "value-3": {
+          "type": "column",
+          "settings": {
+            "title": "Loud by design",
+            "text": "<p>We lean into bold color, street art and pop culture references instead of playing it safe and minimal.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["value-1", "value-2", "value-3"],
+      "settings": {
+        "title": "What we're about",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "values"
+  ]
+}

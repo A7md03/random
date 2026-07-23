@@ -4,13 +4,52 @@
       "type": "main-page",
       "settings": {
         "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "whatsapp-cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Prefer to chat?",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Message us on WhatsApp for the fastest reply on custom orders, sizing, or order changes.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "header_button1": "",
+            "button_label": "Chat on WhatsApp",
+            "button_link": "https://wa.me/TODO_WHATSAPP_NUMBER",
+            "button_style_secondary": false,
+            "header_button2": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Send us a message",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
         "padding_top": 36,
@@ -20,6 +59,7 @@
   },
   "order": [
     "main",
+    "whatsapp-cta",
     "form"
   ]
 }

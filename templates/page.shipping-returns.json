@@ -1,0 +1,112 @@
+{
+  "sections": {
+    "shipping": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Shipping",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shipping across the UAE",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every order is custom printed, so please allow 1-3 business days for production before it ships. Once your order ships, delivery across the UAE typically takes 1-3 business days depending on your emirate.</p><p>Orders over AED 150 ship free. Below that, a flat shipping fee applies at checkout. You will receive a shipping confirmation email with a tracking link as soon as your order leaves our studio.</p>"
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text"],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 52,
+        "padding_bottom": 24
+      }
+    },
+    "returns": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Returns & Exchanges",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Returns & exchanges",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because every case and sticker sheet is printed specifically for you, we are only able to offer returns or exchanges if your item arrives damaged, defective, or doesn't match what you ordered.</p><p>Contact us within 7 days of delivery with your order number and a photo of the issue, and we will arrange a replacement or refund. Change-of-mind returns are not accepted on custom-printed items.</p>"
+          }
+        }
+      },
+      "block_order": ["caption", "heading", "text"],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 52
+      }
+    },
+    "whatsapp-cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Questions about an order?",
+            "heading_size": "h1"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "header_button1": "",
+            "button_label": "Chat on WhatsApp",
+            "button_link": "https://wa.me/TODO_WHATSAPP_NUMBER",
+            "button_style_secondary": false,
+            "header_button2": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": ["heading", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "shipping",
+    "returns",
+    "whatsapp-cta"
+  ]
+}
