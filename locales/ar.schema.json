@@ -1,0 +1,3424 @@
+{
+  "settings_schema": {
+    "global": {
+      "settings": {
+        "header__border": {
+          "content": "الحدود"
+        },
+        "header__shadow": {
+          "content": "الظل"
+        },
+        "blur": {
+          "label": "ضبابي"
+        },
+        "corner_radius": {
+          "label": "استدارة الزوايا"
+        },
+        "horizontal_offset": {
+          "label": "الإزاحة الأفقية"
+        },
+        "vertical_offset": {
+          "label": "الإزاحة العمودية"
+        },
+        "thickness": {
+          "label": "السماكة"
+        },
+        "opacity": {
+          "label": "الشفافية"
+        },
+        "image_padding": {
+          "label": "حشوة الصورة"
+        },
+        "text_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "محاذاة النص"
+        }
+      }
+    },
+    "cards": {
+      "name": "بطاقات المنتج",
+      "settings": {
+        "style": {
+          "options__1": {
+            "label": "قياسي"
+          },
+          "options__2": {
+            "label": "البطاقة"
+          },
+          "label": "النمط"
+        }
+      }
+    },
+    "collection_cards": {
+      "name": "بطاقات المجموعة",
+      "settings": {
+        "style": {
+          "options__1": {
+            "label": "قياسي"
+          },
+          "options__2": {
+            "label": "البطاقة"
+          },
+          "label": "النمط"
+        }
+      }
+    },
+    "blog_cards": {
+      "name": "بطاقات المدونة",
+      "settings": {
+        "style": {
+          "options__1": {
+            "label": "قياسي"
+          },
+          "options__2": {
+            "label": "البطاقة"
+          },
+          "label": "النمط"
+        }
+      }
+    },
+    "badges": {
+      "name": "الشارات",
+      "settings": {
+        "position": {
+          "options__1": {
+            "label": "أسفل اليسار"
+          },
+          "options__2": {
+            "label": "أسفل اليمين"
+          },
+          "options__3": {
+            "label": "أعلى اليسار"
+          },
+          "options__4": {
+            "label": "أعلى اليمين"
+          },
+          "label": "الموضع على البطاقات"
+        },
+        "sale_badge_color_scheme": {
+          "label": "نظام ألوان شارة التخفيض"
+        },
+        "sold_out_badge_color_scheme": {
+          "label": "نظام ألوان شارة نفاد الكمية"
+        }
+      }
+    },
+    "colors": {
+      "name": "الألوان",
+      "settings": {
+        "background": {
+          "label": "الخلفية"
+        },
+        "background_gradient": {
+          "label": "تدرج الخلفية",
+          "info": "يحل تدرج الخلفية محل الخلفية عند الإمكان."
+        },
+        "text": {
+          "label": "النص"
+        },
+        "button_background": {
+          "label": "خلفية الزر المعبأ"
+        },
+        "button_label": {
+          "label": "نص الزر المعبأ"
+        },
+        "secondary_button_label": {
+          "label": "زر بحد خارجي"
+        },
+        "shadow": {
+          "label": "الظل"
+        }
+      }
+    },
+    "logo": {
+      "name": "الشعار",
+      "settings": {
+        "logo_image": {
+          "label": "الشعار"
+        },
+        "logo_width": {
+          "label": "العرض"
+        },
+        "favicon": {
+          "label": "أيقونة المتصفح",
+          "info": "يُعرض بمقاس 32 × 32 بكسل"
+        }
+      }
+    },
+    "brand_information": {
+      "name": "معلومات العلامة التجارية",
+      "settings": {
+        "paragraph": {
+          "content": "يظهر في قسم معلومات العلامة التجارية في التذييل"
+        },
+        "brand_headline": {
+          "label": "العنوان الرئيسي"
+        },
+        "brand_description": {
+          "label": "الوصف"
+        },
+        "brand_image": {
+          "label": "الصورة"
+        },
+        "brand_image_width": {
+          "label": "عرض الصورة"
+        }
+      }
+    },
+    "typography": {
+      "name": "الطباعة",
+      "settings": {
+        "type_header_font": {
+          "label": "الخط"
+        },
+        "heading_scale": {
+          "label": "التحجيم"
+        },
+        "header__1": {
+          "content": "العناوين"
+        },
+        "header__2": {
+          "content": "النص الأساسي"
+        },
+        "type_body_font": {
+          "label": "الخط"
+        },
+        "body_scale": {
+          "label": "التحجيم"
+        }
+      }
+    },
+    "buttons": {
+      "name": "الأزرار"
+    },
+    "variant_pills": {
+      "name": "أقراص المتغيرات",
+      "paragraph": "أقراص المتغيرات هي إحدى طرق عرض [متغيرات منتجك](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types/product-pages#variant-picker-block)"
+    },
+    "inputs": {
+      "name": "حقول الإدخال"
+    },
+    "content_containers": {
+      "name": "حاويات المحتوى"
+    },
+    "popups": {
+      "name": "القوائم المنسدلة والنوافذ المنبثقة",
+      "paragraph": "يؤثر على مناطق مثل القوائم المنسدلة للتنقل والنوافذ المنبثقة ونافذة السلة"
+    },
+    "media": {
+      "name": "الوسائط"
+    },
+    "drawers": {
+      "name": "الأدراج"
+    },
+    "animations": {
+      "name": "الحركات",
+      "settings": {
+        "animations_reveal_on_scroll": {
+          "label": "إظهار الأقسام عند التمرير"
+        },
+        "animations_hover_elements": {
+          "options__1": {
+            "label": "بلا"
+          },
+          "options__2": {
+            "label": "رفع عمودي"
+          },
+          "options__3": {
+            "label": "تأثير ثلاثي الأبعاد"
+          },
+          "label": "تأثير التمرير",
+          "info": "يؤثر على البطاقات والأزرار"
+        }
+      }
+    },
+    "social-media": {
+      "name": "وسائل التواصل الاجتماعي",
+      "settings": {
+        "header": {
+          "content": "حسابات التواصل الاجتماعي"
+        },
+        "social_twitter_link": {
+          "label": "X (تويتر)",
+          "info": "https://x.com/shopify"
+        },
+        "social_facebook_link": {
+          "label": "فيسبوك",
+          "info": "https://facebook.com/shopify"
+        },
+        "social_pinterest_link": {
+          "label": "بينتيريست",
+          "info": "https://pinterest.com/shopify"
+        },
+        "social_instagram_link": {
+          "label": "إنستغرام",
+          "info": "http://instagram.com/shopify"
+        },
+        "social_tiktok_link": {
+          "label": "تيك توك",
+          "info": "https://tiktok.com/@shopify"
+        },
+        "social_tumblr_link": {
+          "label": "تمبلر",
+          "info": "https://shopify.tumblr.com"
+        },
+        "social_snapchat_link": {
+          "label": "سناب شات",
+          "info": "https://www.snapchat.com/add/shopify"
+        },
+        "social_youtube_link": {
+          "label": "يوتيوب",
+          "info": "https://www.youtube.com/shopify"
+        },
+        "social_vimeo_link": {
+          "label": "فيميو",
+          "info": "https://vimeo.com/shopify"
+        }
+      }
+    },
+    "whatsapp": {
+      "name": "واتساب",
+      "settings": {
+        "whatsapp_number": {
+          "label": "رقم الواتساب",
+          "info": "أدرج رمز البلد، مثال: 9715XXXXXXXX"
+        }
+      }
+    },
+    "search_input": {
+      "name": "سلوك البحث",
+      "settings": {
+        "predictive_search_enabled": {
+          "label": "اقتراحات البحث"
+        },
+        "predictive_search_show_vendor": {
+          "label": "مورد المنتج",
+          "info": "يظهر عند تفعيل اقتراحات البحث"
+        },
+        "predictive_search_show_price": {
+          "label": "سعر المنتج",
+          "info": "يظهر عند تفعيل اقتراحات البحث"
+        }
+      }
+    },
+    "currency_format": {
+      "name": "تنسيق العملة",
+      "settings": {
+        "paragraph": "تعرض أسعار السلة والدفع دائماً رموز العملات",
+        "currency_code_enabled": {
+          "label": "رموز العملات"
+        }
+      }
+    },
+    "cart": {
+      "name": "السلة",
+      "settings": {
+        "cart_type": {
+          "label": "النوع",
+          "drawer": {
+            "label": "درج"
+          },
+          "page": {
+            "label": "الصفحة"
+          },
+          "notification": {
+            "label": "إشعار منبثق"
+          }
+        },
+        "show_vendor": {
+          "label": "المورد"
+        },
+        "show_cart_note": {
+          "label": "ملاحظة السلة"
+        },
+        "cart_drawer": {
+          "header": "درج السلة",
+          "collection": {
+            "label": "المجموعة",
+            "info": "يظهر عندما يكون درج السلة فارغاً"
+          }
+        }
+      }
+    },
+    "layout": {
+      "name": "التخطيط",
+      "settings": {
+        "page_width": {
+          "label": "عرض الصفحة"
+        },
+        "spacing_sections": {
+          "label": "المسافة بين أقسام القالب"
+        },
+        "header__grid": {
+          "content": "شبكة"
+        },
+        "paragraph__grid": {
+          "content": "يؤثر على المناطق ذات الأعمدة أو الصفوف المتعددة"
+        },
+        "spacing_grid_horizontal": {
+          "label": "المسافة الأفقية"
+        },
+        "spacing_grid_vertical": {
+          "label": "المسافة العمودية"
+        }
+      }
+    }
+  },
+  "sections": {
+    "all": {
+      "animation": {
+        "content": "الحركات",
+        "image_behavior": {
+          "options__1": {
+            "label": "بلا"
+          },
+          "options__2": {
+            "label": "حركة محيطية"
+          },
+          "options__3": {
+            "label": "موضع خلفية ثابت"
+          },
+          "options__4": {
+            "label": "التكبير عند التمرير"
+          },
+          "label": "الحركة"
+        }
+      },
+      "padding": {
+        "section_padding_heading": "الحشوة",
+        "padding_top": "أعلى",
+        "padding_bottom": "أسفل"
+      },
+      "spacing": "التباعد",
+      "colors": {
+        "label": "نظام الألوان",
+        "has_cards_info": "لتغيير نظام ألوان البطاقة، حدّث إعدادات المتجر."
+      },
+      "heading_size": {
+        "label": "حجم العنوان",
+        "options__1": {
+          "label": "صغير"
+        },
+        "options__2": {
+          "label": "متوسط"
+        },
+        "options__3": {
+          "label": "كبير"
+        },
+        "options__4": {
+          "label": "كبير جداً"
+        },
+        "options__5": {
+          "label": "كبير جداً جداً"
+        }
+      },
+      "image_shape": {
+        "options__1": {
+          "label": "افتراضي"
+        },
+        "options__2": {
+          "label": "قوس"
+        },
+        "options__3": {
+          "label": "شكل حر"
+        },
+        "options__4": {
+          "label": "سهم لليسار"
+        },
+        "options__5": {
+          "label": "سهم لليمين"
+        },
+        "options__6": {
+          "label": "معين"
+        },
+        "options__7": {
+          "label": "متوازي أضلاع"
+        },
+        "options__8": {
+          "label": "مستدير"
+        },
+        "label": "شكل الصورة"
+      }
+    },
+    "announcement-bar": {
+      "name": "شريط الإعلانات",
+      "settings": {
+        "auto_rotate": {
+          "label": "تدوير الإعلانات تلقائياً"
+        },
+        "change_slides_speed": {
+          "label": "التغيير كل"
+        },
+        "heading_utilities": {
+          "content": "أدوات مساعدة"
+        },
+        "paragraph": {
+          "content": "يظهر فقط على الشاشات الكبيرة"
+        },
+        "show_social": {
+          "label": "أيقونات وسائل التواصل الاجتماعي",
+          "info": "[أدر حسابات التواصل الاجتماعي](/editor?context=theme&category=social%20media)"
+        },
+        "enable_country_selector": {
+          "label": "محدد البلد/المنطقة",
+          "info": "[أدر البلدان/المناطق](/admin/settings/markets)"
+        },
+        "enable_language_selector": {
+          "label": "محدد اللغة",
+          "info": "[أدر اللغات](/admin/settings/languages)"
+        }
+      },
+      "blocks": {
+        "announcement": {
+          "name": "إعلان",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "مرحباً بكم في متجرنا"
+            },
+            "text_alignment": {
+              "label": "محاذاة النص",
+              "options__1": {
+                "label": "اليسار"
+              },
+              "options__2": {
+                "label": "الوسط"
+              },
+              "options__3": {
+                "label": "اليمين"
+              }
+            },
+            "link": {
+              "label": "الرابط"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "شريط الإعلانات"
+      }
+    },
+    "apps": {
+      "name": "التطبيقات",
+      "settings": {
+        "include_margins": {
+          "label": "اجعل هوامش القسم مطابقة للثيم"
+        }
+      },
+      "presets": {
+        "name": "التطبيقات"
+      }
+    },
+    "collage": {
+      "name": "كولاج",
+      "settings": {
+        "heading": {
+          "default": "كولاج وسائط متعددة",
+          "label": "العنوان"
+        },
+        "header_layout": {
+          "content": "التخطيط"
+        },
+        "desktop_layout": {
+          "label": "التخطيط",
+          "options__1": {
+            "label": "الكتلة الكبيرة أولاً"
+          },
+          "options__2": {
+            "label": "الكتلة الكبيرة أخيراً"
+          }
+        },
+        "mobile_layout": {
+          "label": "تخطيط الجوال",
+          "options__1": {
+            "label": "كولاج"
+          },
+          "options__2": {
+            "label": "عمود"
+          }
+        },
+        "card_styles": {
+          "label": "نمط البطاقة",
+          "info": "أدر أنماط البطاقات الفردية من [إعدادات المتجر](/editor?context=theme&category=product%20cards)",
+          "options__1": {
+            "label": "استخدام أنماط بطاقات فردية"
+          },
+          "options__2": {
+            "label": "تنسيق الكل كبطاقات منتجات"
+          }
+        }
+      },
+      "blocks": {
+        "image": {
+          "name": "الصورة",
+          "settings": {
+            "image": {
+              "label": "الصورة"
+            }
+          }
+        },
+        "product": {
+          "name": "المنتج",
+          "settings": {
+            "product": {
+              "label": "المنتج"
+            },
+            "secondary_background": {
+              "label": "إظهار الخلفية الثانوية"
+            },
+            "second_image": {
+              "label": "إظهار الصورة الثانية عند التمرير"
+            }
+          }
+        },
+        "collection": {
+          "name": "المجموعة",
+          "settings": {
+            "collection": {
+              "label": "المجموعة"
+            }
+          }
+        },
+        "video": {
+          "name": "الفيديو",
+          "settings": {
+            "cover_image": {
+              "label": "صورة الغلاف"
+            },
+            "video_url": {
+              "label": "الرابط",
+              "info": "يتم تشغيل الفيديو في نافذة منبثقة إذا كان القسم يحتوي على كتل أخرى.",
+              "placeholder": "استخدم رابط يوتيوب أو فيميو"
+            },
+            "description": {
+              "default": "صف الفيديو",
+              "label": "النص البديل للفيديو",
+              "info": "صف الفيديو للعملاء الذين يستخدمون قارئ الشاشة. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "كولاج"
+      }
+    },
+    "collection-list": {
+      "name": "قائمة المجموعات",
+      "settings": {
+        "title": {
+          "default": "المجموعات",
+          "label": "العنوان"
+        },
+        "header_layout": {
+          "content": "التخطيط"
+        },
+        "image_ratio": {
+          "label": "نسبة الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "طولي"
+          },
+          "options__3": {
+            "label": "مربع"
+          }
+        },
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "show_view_all": {
+          "label": "زر \"عرض الكل\"",
+          "info": "يظهر إذا كانت القائمة تحتوي على مجموعات أكثر من المعروضة"
+        },
+        "header_mobile": {
+          "content": "تخطيط الجوال"
+        },
+        "columns_mobile": {
+          "label": "الأعمدة",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        },
+        "swipe_on_mobile": {
+          "label": "شريط دوّار"
+        }
+      },
+      "blocks": {
+        "featured_collection": {
+          "name": "المجموعة",
+          "settings": {
+            "collection": {
+              "label": "المجموعة"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "قائمة المجموعات"
+      }
+    },
+    "contact-form": {
+      "name": "نموذج التواصل",
+      "presets": {
+        "name": "نموذج التواصل"
+      },
+      "settings": {
+        "title": {
+          "default": "نموذج التواصل",
+          "label": "العنوان"
+        }
+      }
+    },
+    "custom-liquid": {
+      "name": "كود Liquid مخصص",
+      "settings": {
+        "custom_liquid": {
+          "label": "كود Liquid",
+          "info": "أضف مقتطفات التطبيقات أو أكواداً أخرى لإنشاء تخصيصات متقدمة. [اعرف المزيد](https://shopify.dev/docs/api/liquid)"
+        }
+      },
+      "presets": {
+        "name": "كود Liquid مخصص"
+      }
+    },
+    "featured-blog": {
+      "name": "منشورات المدونة",
+      "settings": {
+        "heading": {
+          "default": "منشورات المدونة",
+          "label": "العنوان"
+        },
+        "layout_header": {
+          "content": "التخطيط"
+        },
+        "text_header": {
+          "content": "النص"
+        },
+        "blog": {
+          "label": "المدونة"
+        },
+        "post_limit": {
+          "label": "عدد المنشورات"
+        },
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "show_view_all": {
+          "label": "زر \"عرض الكل\"",
+          "info": "يظهر إذا كانت المدونة تحتوي على منشورات أكثر من المعروضة"
+        },
+        "show_image": {
+          "label": "الصورة المميزة"
+        },
+        "show_date": {
+          "label": "التاريخ"
+        },
+        "show_author": {
+          "label": "الكاتب"
+        }
+      },
+      "presets": {
+        "name": "منشورات المدونة"
+      }
+    },
+    "featured-collection": {
+      "name": "المجموعة المميزة",
+      "settings": {
+        "header_text": {
+          "content": "النص"
+        },
+        "title": {
+          "label": "العنوان",
+          "default": "المجموعة المميزة"
+        },
+        "description": {
+          "label": "الوصف"
+        },
+        "show_description": {
+          "label": "إظهار وصف المجموعة من لوحة التحكم"
+        },
+        "description_style": {
+          "label": "نمط الوصف",
+          "options__1": {
+            "label": "النص الأساسي"
+          },
+          "options__2": {
+            "label": "العنوان الفرعي"
+          },
+          "options__3": {
+            "label": "أحرف كبيرة"
+          }
+        },
+        "header_collection": {
+          "content": "تخطيط المجموعة"
+        },
+        "header_mobile": {
+          "content": "تخطيط الجوال"
+        },
+        "collection": {
+          "label": "المجموعة"
+        },
+        "products_to_show": {
+          "label": "عدد المنتجات"
+        },
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "show_view_all": {
+          "label": "زر \"عرض الكل\"",
+          "info": "يظهر إذا كانت المجموعة تحتوي على منتجات أكثر من المعروضة"
+        },
+        "view_all_style": {
+          "label": "نمط \"عرض الكل\"",
+          "options__1": {
+            "label": "الرابط"
+          },
+          "options__2": {
+            "label": "زر بحد خارجي"
+          },
+          "options__3": {
+            "label": "زر معبأ"
+          }
+        },
+        "enable_desktop_slider": {
+          "label": "شريط دوّار"
+        },
+        "full_width": {
+          "label": "منتجات بعرض كامل"
+        },
+        "header": {
+          "content": "بطاقة المنتج"
+        },
+        "image_ratio": {
+          "label": "نسبة الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "طولي"
+          },
+          "options__3": {
+            "label": "مربع"
+          }
+        },
+        "show_secondary_image": {
+          "label": "إظهار الصورة الثانية عند التمرير"
+        },
+        "show_vendor": {
+          "label": "المورد"
+        },
+        "show_rating": {
+          "label": "تقييم المنتج",
+          "info": "يتطلب التقييم تطبيقاً. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-collection-show-product-rating)"
+        },
+        "enable_quick_buy": {
+          "label": "إضافة سريعة"
+        },
+        "columns_mobile": {
+          "label": "الأعمدة",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        },
+        "swipe_on_mobile": {
+          "label": "شريط دوّار"
+        }
+      },
+      "presets": {
+        "name": "المجموعة المميزة"
+      }
+    },
+    "featured-product": {
+      "name": "المنتج المميز",
+      "blocks": {
+        "text": {
+          "name": "النص",
+          "settings": {
+            "text": {
+              "default": "كتلة نصية",
+              "label": "النص"
+            },
+            "text_style": {
+              "label": "النمط",
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              },
+              "options__3": {
+                "label": "أحرف كبيرة"
+              }
+            }
+          }
+        },
+        "title": {
+          "name": "العنوان"
+        },
+        "price": {
+          "name": "السعر"
+        },
+        "quantity_selector": {
+          "name": "محدد الكمية"
+        },
+        "variant_picker": {
+          "name": "محدد المتغيرات",
+          "settings": {
+            "picker_type": {
+              "label": "النمط",
+              "options__1": {
+                "label": "قائمة منسدلة"
+              },
+              "options__2": {
+                "label": "أقراص"
+              }
+            },
+            "swatch_shape": {
+              "label": "عيّنة لون",
+              "info": "اعرف المزيد عن [عيّنات الألوان](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) في خيارات المنتج",
+              "options__1": {
+                "label": "دائرة"
+              },
+              "options__2": {
+                "label": "مربع"
+              },
+              "options__3": {
+                "label": "بلا"
+              }
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "أزرار الشراء",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "أزرار الدفع الديناميكية",
+              "info": "سيرى العملاء خيار الدفع المفضل لديهم. [اعرف المزيد](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            }
+          }
+        },
+        "sku": {
+          "name": "SKU",
+          "settings": {
+            "text_style": {
+              "label": "نمط النص",
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              },
+              "options__3": {
+                "label": "أحرف كبيرة"
+              }
+            }
+          }
+        },
+        "description": {
+          "name": "الوصف"
+        },
+        "share": {
+          "name": "مشاركة",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "مشاركة"
+            },
+            "featured_image_info": {
+              "content": "إذا أدرجت رابطاً في منشورات وسائل التواصل الاجتماعي، ستظهر الصورة المميزة للصفحة كصورة معاينة. [اعرف المزيد](https://help.shopify.com/manual/online-store/images/showing-social-media-thumbnail-images)"
+            },
+            "title_info": {
+              "content": "يتم تضمين عنوان ووصف المتجر مع صورة المعاينة. [اعرف المزيد](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)"
+            }
+          }
+        },
+        "rating": {
+          "name": "تقييم المنتج",
+          "settings": {
+            "paragraph": {
+              "content": "يتطلب تقييم المنتجات تطبيقاً. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-product-rating)"
+            }
+          }
+        }
+      },
+      "settings": {
+        "product": {
+          "label": "المنتج"
+        },
+        "secondary_background": {
+          "label": "الخلفية الثانوية"
+        },
+        "header": {
+          "content": "الوسائط"
+        },
+        "media_position": {
+          "label": "الموضع",
+          "info": "يتم تحسين الموضع تلقائياً للجوال.",
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "اليمين"
+          }
+        },
+        "hide_variants": {
+          "label": "إخفاء وسائط المتغيرات غير المختارة على سطح المكتب"
+        },
+        "enable_video_looping": {
+          "label": "تكرار الفيديو"
+        }
+      },
+      "presets": {
+        "name": "المنتج المميز"
+      }
+    },
+    "footer": {
+      "name": "التذييل",
+      "blocks": {
+        "link_list": {
+          "name": "القائمة",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "روابط سريعة"
+            },
+            "menu": {
+              "label": "القائمة"
+            }
+          }
+        },
+        "brand_information": {
+          "name": "معلومات العلامة التجارية",
+          "settings": {
+            "paragraph": {
+              "content": "أدر معلومات العلامة التجارية من [إعدادات المتجر](/editor?context=theme&category=brand%20information)"
+            },
+            "show_social": {
+              "label": "أيقونات وسائل التواصل الاجتماعي",
+              "info": "[أدر حسابات التواصل الاجتماعي](/editor?context=theme&category=social%20media)"
+            }
+          }
+        },
+        "text": {
+          "name": "النص",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "العنوان"
+            },
+            "subtext": {
+              "label": "النص الفرعي",
+              "default": "<p>شارك معلومات التواصل وتفاصيل المتجر ومحتوى العلامة التجارية مع عملائك.</p>"
+            }
+          }
+        }
+      },
+      "settings": {
+        "newsletter_enable": {
+          "label": "الاشتراك بالبريد الإلكتروني"
+        },
+        "newsletter_heading": {
+          "label": "العنوان",
+          "default": "اشترك في نشرتنا البريدية"
+        },
+        "header__1": {
+          "content": "الاشتراك بالبريد الإلكتروني",
+          "info": "تضيف الاشتراكات [ملفات عملاء](https://help.shopify.com/manual/customers/manage-customers)"
+        },
+        "show_social": {
+          "label": "أيقونات وسائل التواصل الاجتماعي",
+          "info": "[أدر حسابات التواصل الاجتماعي](/editor?context=theme&category=social%20media)"
+        },
+        "enable_country_selector": {
+          "label": "محدد البلد/المنطقة",
+          "info": "[أدر البلدان/المناطق](/admin/settings/markets)"
+        },
+        "enable_language_selector": {
+          "label": "محدد اللغة",
+          "info": "[أدر اللغات](/admin/settings/languages)"
+        },
+        "payment_enable": {
+          "label": "أيقونات طرق الدفع"
+        },
+        "show_policy": {
+          "label": "روابط السياسات",
+          "info": "[أدر السياسات](/admin/settings/legal)"
+        },
+        "margin_top": {
+          "label": "الهامش العلوي"
+        },
+        "header__9": {
+          "content": "أدوات مساعدة"
+        },
+        "enable_follow_on_shop": {
+          "label": "متابعة عبر Shop",
+          "info": "يجب تفعيل Shop Pay. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
+        }
+      }
+    },
+    "header": {
+      "name": "الترويسة",
+      "settings": {
+        "logo_help": {
+          "content": "عدّل شعارك من [إعدادات المتجر](/editor?context=theme&category=logo)"
+        },
+        "logo_position": {
+          "label": "موضع الشعار",
+          "options__1": {
+            "label": "وسط اليسار"
+          },
+          "options__2": {
+            "label": "أعلى اليسار"
+          },
+          "options__3": {
+            "label": "أعلى الوسط"
+          },
+          "options__4": {
+            "label": "وسط الوسط"
+          }
+        },
+        "menu": {
+          "label": "القائمة"
+        },
+        "menu_type_desktop": {
+          "label": "نوع القائمة",
+          "options__1": {
+            "label": "قائمة منسدلة"
+          },
+          "options__2": {
+            "label": "قائمة ضخمة"
+          },
+          "options__3": {
+            "label": "درج"
+          }
+        },
+        "show_line_separator": {
+          "label": "خط فاصل"
+        },
+        "header__1": {
+          "content": "اللون"
+        },
+        "menu_color_scheme": {
+          "label": "نظام ألوان القائمة"
+        },
+        "sticky_header_type": {
+          "label": "ترويسة ثابتة",
+          "options__1": {
+            "label": "بلا"
+          },
+          "options__2": {
+            "label": "عند التمرير لأعلى"
+          },
+          "options__3": {
+            "label": "دائماً"
+          },
+          "options__4": {
+            "label": "دائماً، مع تصغير حجم الشعار"
+          }
+        },
+        "header__utilities": {
+          "content": "أدوات مساعدة"
+        },
+        "enable_country_selector": {
+          "label": "محدد البلد/المنطقة",
+          "info": "[أدر البلدان/المناطق](/admin/settings/markets)"
+        },
+        "enable_language_selector": {
+          "label": "محدد اللغة",
+          "info": "[أدر اللغات](/admin/settings/languages)"
+        },
+        "margin_bottom": {
+          "label": "الهامش السفلي"
+        },
+        "mobile_logo_position": {
+          "label": "موضع الشعار على الجوال",
+          "options__1": {
+            "label": "الوسط"
+          },
+          "options__2": {
+            "label": "اليسار"
+          }
+        },
+        "enable_customer_avatar": {
+          "label": "الصورة الرمزية لحساب العميل",
+          "info": "يظهر فقط عندما يكون العملاء مسجلين عبر Shop. [أدر حسابات العملاء](/admin/settings/customer_accounts)"
+        }
+      }
+    },
+    "image-banner": {
+      "name": "بانر الصورة",
+      "settings": {
+        "image": {
+          "label": "الصورة 1"
+        },
+        "image_2": {
+          "label": "الصورة 2"
+        },
+        "image_overlay_opacity": {
+          "label": "شفافية الطبقة العلوية"
+        },
+        "image_height": {
+          "label": "الارتفاع",
+          "options__1": {
+            "label": "التكيّف مع الصورة الأولى"
+          },
+          "options__2": {
+            "label": "صغير"
+          },
+          "options__3": {
+            "label": "متوسط"
+          },
+          "options__4": {
+            "label": "كبير"
+          }
+        },
+        "content": {
+          "content": "المحتوى"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "أعلى اليسار"
+          },
+          "options__2": {
+            "label": "أعلى الوسط"
+          },
+          "options__3": {
+            "label": "أعلى اليمين"
+          },
+          "options__4": {
+            "label": "وسط اليسار"
+          },
+          "options__5": {
+            "label": "وسط الوسط"
+          },
+          "options__6": {
+            "label": "وسط اليمين"
+          },
+          "options__7": {
+            "label": "أسفل اليسار"
+          },
+          "options__8": {
+            "label": "أسفل الوسط"
+          },
+          "options__9": {
+            "label": "أسفل اليمين"
+          },
+          "label": "الموضع"
+        },
+        "show_text_box": {
+          "label": "الحاوية"
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة"
+        },
+        "mobile": {
+          "content": "تخطيط الجوال"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة"
+        },
+        "stack_images_on_mobile": {
+          "label": "تكديس الصور"
+        },
+        "show_text_below": {
+          "label": "الحاوية"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "العنوان",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "بانر الصورة"
+            }
+          }
+        },
+        "text": {
+          "name": "النص",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "زوّد العملاء بتفاصيل عن صورة (صور) البانر أو محتوى القالب."
+            },
+            "text_style": {
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              },
+              "options__3": {
+                "label": "أحرف كبيرة"
+              },
+              "label": "النمط"
+            }
+          }
+        },
+        "buttons": {
+          "name": "الأزرار",
+          "settings": {
+            "header_1": {
+              "content": "زر 1"
+            },
+            "button_label_1": {
+              "label": "التسمية",
+              "info": "اتركه فارغاً للإخفاء",
+              "default": "نص الزر"
+            },
+            "button_link_1": {
+              "label": "الرابط"
+            },
+            "button_style_secondary_1": {
+              "label": "نمط الحد الخارجي"
+            },
+            "header_2": {
+              "content": "زر 2"
+            },
+            "button_label_2": {
+              "label": "التسمية",
+              "info": "اتركه فارغاً للإخفاء",
+              "default": "نص الزر"
+            },
+            "button_link_2": {
+              "label": "الرابط"
+            },
+            "button_style_secondary_2": {
+              "label": "نمط الحد الخارجي"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "بانر الصورة"
+      }
+    },
+    "image-with-text": {
+      "name": "صورة مع نص",
+      "settings": {
+        "header": {
+          "content": "المحتوى"
+        },
+        "header_colors": {
+          "content": "الألوان"
+        },
+        "image": {
+          "label": "الصورة"
+        },
+        "height": {
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "صغير"
+          },
+          "options__3": {
+            "label": "متوسط"
+          },
+          "options__4": {
+            "label": "كبير"
+          },
+          "label": "الارتفاع"
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "صغير"
+          },
+          "options__2": {
+            "label": "متوسط"
+          },
+          "options__3": {
+            "label": "كبير"
+          },
+          "label": "العرض"
+        },
+        "layout": {
+          "options__1": {
+            "label": "الصورة أولاً"
+          },
+          "options__2": {
+            "label": "الصورة ثانياً"
+          },
+          "label": "الموضع"
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "أعلى"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "أسفل"
+          },
+          "label": "الموضع"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "بدون تداخل"
+          },
+          "options__2": {
+            "label": "تداخل"
+          },
+          "label": "التخطيط"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة على الجوال"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "العنوان",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "صورة مع نص"
+            }
+          }
+        },
+        "caption": {
+          "name": "وصف مختصر",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "أضف شعاراً"
+            },
+            "text_style": {
+              "label": "النمط",
+              "options__1": {
+                "label": "العنوان الفرعي"
+              },
+              "options__2": {
+                "label": "أحرف كبيرة"
+              }
+            },
+            "caption_size": {
+              "label": "الحجم",
+              "options__1": {
+                "label": "صغير"
+              },
+              "options__2": {
+                "label": "متوسط"
+              },
+              "options__3": {
+                "label": "كبير"
+              }
+            }
+          }
+        },
+        "text": {
+          "name": "النص",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "<p>اجمع بين النص والصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي تختاره. أضف تفاصيل عن التوفر أو النمط أو حتى قدّم مراجعة.</p>"
+            },
+            "text_style": {
+              "label": "النمط",
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "زر",
+          "settings": {
+            "button_label": {
+              "label": "التسمية",
+              "info": "اتركه فارغاً للإخفاء",
+              "default": "نص الزر"
+            },
+            "button_link": {
+              "label": "الرابط"
+            },
+            "outline_button": {
+              "label": "نمط الحد الخارجي"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "صورة مع نص"
+      }
+    },
+    "multirow": {
+      "name": "متعدد الصفوف",
+      "settings": {
+        "image": {
+          "label": "الصورة"
+        },
+        "header": {
+          "content": "الصورة"
+        },
+        "header_2": {
+          "content": "المحتوى"
+        },
+        "header_3": {
+          "content": "الألوان"
+        },
+        "image_height": {
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "صغير"
+          },
+          "options__3": {
+            "label": "متوسط"
+          },
+          "options__4": {
+            "label": "كبير"
+          },
+          "label": "الارتفاع"
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "صغير"
+          },
+          "options__2": {
+            "label": "متوسط"
+          },
+          "options__3": {
+            "label": "كبير"
+          },
+          "label": "العرض"
+        },
+        "text_style": {
+          "options__1": {
+            "label": "النص الأساسي"
+          },
+          "options__2": {
+            "label": "العنوان الفرعي"
+          },
+          "label": "نمط النص"
+        },
+        "button_style": {
+          "options__1": {
+            "label": "زر معبأ"
+          },
+          "options__2": {
+            "label": "زر بحد خارجي"
+          },
+          "label": "نمط الزر"
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "أعلى"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "أسفل"
+          },
+          "label": "الموضع"
+        },
+        "image_layout": {
+          "options__1": {
+            "label": "بالتناوب من اليسار"
+          },
+          "options__2": {
+            "label": "بالتناوب من اليمين"
+          },
+          "options__3": {
+            "label": "محاذاة لليسار"
+          },
+          "options__4": {
+            "label": "محاذاة لليمين"
+          },
+          "label": "الموضع"
+        },
+        "container_color_scheme": {
+          "label": "نظام ألوان الحاوية"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة على الجوال"
+        }
+      },
+      "blocks": {
+        "row": {
+          "name": "صف",
+          "settings": {
+            "image": {
+              "label": "الصورة"
+            },
+            "caption": {
+              "label": "وصف مختصر",
+              "default": "وصف مختصر"
+            },
+            "heading": {
+              "label": "العنوان",
+              "default": "صف"
+            },
+            "text": {
+              "label": "النص",
+              "default": "<p>اجمع بين النص والصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي تختاره. أضف تفاصيل عن التوفر أو النمط أو حتى قدّم مراجعة.</p>"
+            },
+            "button_label": {
+              "label": "نص الزر",
+              "info": "اتركه فارغاً للإخفاء",
+              "default": "نص الزر"
+            },
+            "button_link": {
+              "label": "رابط الزر"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "متعدد الصفوف"
+      }
+    },
+    "main-account": {
+      "name": "الحساب"
+    },
+    "main-activate-account": {
+      "name": "تفعيل الحساب"
+    },
+    "main-addresses": {
+      "name": "العناوين"
+    },
+    "main-article": {
+      "name": "منشور المدونة",
+      "blocks": {
+        "featured_image": {
+          "name": "الصورة المميزة",
+          "settings": {
+            "image_height": {
+              "label": "ارتفاع الصورة",
+              "options__1": {
+                "label": "التكيّف مع الصورة"
+              },
+              "options__2": {
+                "label": "صغير"
+              },
+              "options__3": {
+                "label": "متوسط"
+              },
+              "options__4": {
+                "label": "كبير"
+              }
+            }
+          }
+        },
+        "title": {
+          "name": "العنوان",
+          "settings": {
+            "blog_show_date": {
+              "label": "التاريخ"
+            },
+            "blog_show_author": {
+              "label": "الكاتب"
+            }
+          }
+        },
+        "content": {
+          "name": "المحتوى"
+        },
+        "share": {
+          "name": "مشاركة",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "مشاركة"
+            }
+          }
+        }
+      }
+    },
+    "main-blog": {
+      "name": "منشورات المدونة",
+      "settings": {
+        "show_image": {
+          "label": "الصورة المميزة"
+        },
+        "show_date": {
+          "label": "التاريخ"
+        },
+        "show_author": {
+          "label": "الكاتب"
+        },
+        "layout": {
+          "label": "التخطيط",
+          "options__1": {
+            "label": "شبكة"
+          },
+          "options__2": {
+            "label": "كولاج"
+          }
+        },
+        "image_height": {
+          "label": "ارتفاع الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "صغير"
+          },
+          "options__3": {
+            "label": "متوسط"
+          },
+          "options__4": {
+            "label": "كبير"
+          }
+        }
+      }
+    },
+    "main-cart-footer": {
+      "name": "المجموع الفرعي",
+      "blocks": {
+        "subtotal": {
+          "name": "سعر المجموع الفرعي"
+        },
+        "buttons": {
+          "name": "زر إتمام الشراء"
+        }
+      }
+    },
+    "main-cart-items": {
+      "name": "العناصر"
+    },
+    "main-collection-banner": {
+      "name": "بانر المجموعة",
+      "settings": {
+        "paragraph": {
+          "content": "تُدار تفاصيل المجموعة [من لوحة التحكم](https://help.shopify.com/manual/products/collections/collection-layout)"
+        },
+        "show_collection_description": {
+          "label": "الوصف"
+        },
+        "show_collection_image": {
+          "label": "الصورة"
+        }
+      }
+    },
+    "main-collection-product-grid": {
+      "name": "شبكة المنتجات",
+      "settings": {
+        "products_per_page": {
+          "label": "المنتجات لكل صفحة"
+        },
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "enable_filtering": {
+          "label": "عوامل التصفية",
+          "info": "خصّص عوامل التصفية باستخدام [تطبيق البحث والاكتشاف](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
+        },
+        "filter_type": {
+          "label": "تخطيط عوامل التصفية",
+          "options__1": {
+            "label": "أفقي"
+          },
+          "options__2": {
+            "label": "عمودي"
+          },
+          "options__3": {
+            "label": "درج"
+          }
+        },
+        "enable_sorting": {
+          "label": "الترتيب"
+        },
+        "image_ratio": {
+          "label": "نسبة الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "طولي"
+          },
+          "options__3": {
+            "label": "مربع"
+          }
+        },
+        "show_secondary_image": {
+          "label": "إظهار الصورة الثانية عند التمرير"
+        },
+        "show_vendor": {
+          "label": "المورد"
+        },
+        "show_rating": {
+          "label": "تقييم المنتج",
+          "info": "يتطلب تقييم المنتجات تطبيقاً. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types/collection-pages#product-grid-show-product-rating)"
+        },
+        "header__1": {
+          "content": "التصفية والترتيب"
+        },
+        "header__3": {
+          "content": "بطاقة المنتج"
+        },
+        "enable_tags": {
+          "label": "عوامل التصفية",
+          "info": "خصّص عوامل التصفية باستخدام [تطبيق البحث والاكتشاف](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
+        },
+        "quick_add": {
+          "label": "إضافة سريعة",
+          "options": {
+            "option_1": "بلا",
+            "option_2": "قياسي",
+            "option_3": "بالجملة"
+          }
+        },
+        "columns_mobile": {
+          "label": "أعمدة الجوال",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        }
+      }
+    },
+    "main-list-collections": {
+      "name": "صفحة قائمة المجموعات",
+      "settings": {
+        "title": {
+          "label": "العنوان",
+          "default": "المجموعات"
+        },
+        "sort": {
+          "label": "ترتيب المجموعات",
+          "options__1": {
+            "label": "أبجدياً، من أ إلى ي"
+          },
+          "options__2": {
+            "label": "أبجدياً، من ي إلى أ"
+          },
+          "options__3": {
+            "label": "التاريخ، من الأحدث إلى الأقدم"
+          },
+          "options__4": {
+            "label": "التاريخ، من الأقدم إلى الأحدث"
+          },
+          "options__5": {
+            "label": "عدد المنتجات، من الأعلى إلى الأقل"
+          },
+          "options__6": {
+            "label": "عدد المنتجات، من الأقل إلى الأعلى"
+          }
+        },
+        "image_ratio": {
+          "label": "نسبة الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "طولي"
+          },
+          "options__3": {
+            "label": "مربع"
+          }
+        },
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "header_mobile": {
+          "content": "تخطيط الجوال"
+        },
+        "columns_mobile": {
+          "label": "أعمدة الجوال",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        }
+      }
+    },
+    "main-login": {
+      "name": "تسجيل الدخول",
+      "shop_login_button": {
+        "enable": "تفعيل تسجيل الدخول عبر Shop"
+      }
+    },
+    "main-order": {
+      "name": "الترتيب"
+    },
+    "main-page": {
+      "name": "الصفحة"
+    },
+    "main-password-footer": {
+      "name": "تذييل صفحة كلمة المرور"
+    },
+    "main-password-header": {
+      "name": "ترويسة صفحة كلمة المرور",
+      "settings": {
+        "logo_help": {
+          "content": "عدّل شعارك من [إعدادات المتجر](/editor?context=theme&category=logo)"
+        }
+      }
+    },
+    "main-product": {
+      "name": "معلومات المنتج",
+      "blocks": {
+        "text": {
+          "name": "النص",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "كتلة نصية"
+            },
+            "text_style": {
+              "label": "النمط",
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              },
+              "options__3": {
+                "label": "أحرف كبيرة"
+              }
+            }
+          }
+        },
+        "title": {
+          "name": "العنوان"
+        },
+        "price": {
+          "name": "السعر"
+        },
+        "inventory": {
+          "name": "حالة المخزون",
+          "settings": {
+            "text_style": {
+              "label": "نمط النص",
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              },
+              "options__3": {
+                "label": "أحرف كبيرة"
+              }
+            },
+            "inventory_threshold": {
+              "label": "حد المخزون المنخفض"
+            },
+            "show_inventory_quantity": {
+              "label": "عدد المخزون"
+            }
+          }
+        },
+        "quantity_selector": {
+          "name": "محدد الكمية"
+        },
+        "variant_picker": {
+          "name": "محدد المتغيرات",
+          "settings": {
+            "picker_type": {
+              "label": "النمط",
+              "options__1": {
+                "label": "قائمة منسدلة"
+              },
+              "options__2": {
+                "label": "أقراص"
+              }
+            },
+            "swatch_shape": {
+              "label": "عيّنة لون",
+              "info": "اعرف المزيد عن [عيّنات الألوان](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) في خيارات المنتج",
+              "options__1": {
+                "label": "دائرة"
+              },
+              "options__2": {
+                "label": "مربع"
+              },
+              "options__3": {
+                "label": "بلا"
+              }
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "أزرار الشراء",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "أزرار الدفع الديناميكية",
+              "info": "سيرى العملاء خيار الدفع المفضل لديهم. [اعرف المزيد](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            },
+            "show_gift_card_recipient": {
+              "label": " خيارات إرسال بطاقة الهدايا",
+              "info": "يمكن للعملاء إضافة رسالة شخصية وجدولة تاريخ الإرسال. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+            }
+          }
+        },
+        "pickup_availability": {
+          "name": "توفر الاستلام"
+        },
+        "description": {
+          "name": "الوصف"
+        },
+        "sku": {
+          "name": "SKU",
+          "settings": {
+            "text_style": {
+              "label": "نمط النص",
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              },
+              "options__3": {
+                "label": "أحرف كبيرة"
+              }
+            }
+          }
+        },
+        "share": {
+          "name": "مشاركة",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "مشاركة"
+            }
+          }
+        },
+        "collapsible_tab": {
+          "name": "صف قابل للطي",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "صف قابل للطي"
+            },
+            "content": {
+              "label": "محتوى الصف"
+            },
+            "page": {
+              "label": "محتوى الصف من الصفحة"
+            },
+            "icon": {
+              "label": "أيقونة",
+              "options__1": {
+                "label": "بلا"
+              },
+              "options__2": {
+                "label": "تفاحة"
+              },
+              "options__3": {
+                "label": "موزة"
+              },
+              "options__4": {
+                "label": "زجاجة"
+              },
+              "options__5": {
+                "label": "صندوق"
+              },
+              "options__6": {
+                "label": "جزرة"
+              },
+              "options__7": {
+                "label": "فقاعة محادثة"
+              },
+              "options__8": {
+                "label": "علامة صح"
+              },
+              "options__9": {
+                "label": "لوح الكتابة"
+              },
+              "options__10": {
+                "label": "ألبان"
+              },
+              "options__11": {
+                "label": "خالٍ من الألبان"
+              },
+              "options__12": {
+                "label": "مجفف"
+              },
+              "options__13": {
+                "label": "عين"
+              },
+              "options__14": {
+                "label": "نار"
+              },
+              "options__15": {
+                "label": "خالٍ من الغلوتين"
+              },
+              "options__16": {
+                "label": "قلب"
+              },
+              "options__17": {
+                "label": "كي"
+              },
+              "options__18": {
+                "label": "ورقة"
+              },
+              "options__19": {
+                "label": "جلد"
+              },
+              "options__20": {
+                "label": "صاعقة"
+              },
+              "options__21": {
+                "label": "أحمر شفاه"
+              },
+              "options__22": {
+                "label": "قفل"
+              },
+              "options__23": {
+                "label": "دبوس خريطة"
+              },
+              "options__24": {
+                "label": "خالٍ من المكسرات"
+              },
+              "options__25": {
+                "label": "بنطال"
+              },
+              "options__26": {
+                "label": "بصمة قدم"
+              },
+              "options__27": {
+                "label": "فلفل"
+              },
+              "options__28": {
+                "label": "عطر"
+              },
+              "options__29": {
+                "label": "طائرة"
+              },
+              "options__30": {
+                "label": "نبتة"
+              },
+              "options__31": {
+                "label": "بطاقة السعر"
+              },
+              "options__32": {
+                "label": "علامة استفهام"
+              },
+              "options__33": {
+                "label": "إعادة تدوير"
+              },
+              "options__34": {
+                "label": "العودة"
+              },
+              "options__35": {
+                "label": "مسطرة"
+              },
+              "options__36": {
+                "label": "طبق تقديم"
+              },
+              "options__37": {
+                "label": "قميص"
+              },
+              "options__38": {
+                "label": "حذاء"
+              },
+              "options__39": {
+                "label": "ظل شخصية"
+              },
+              "options__40": {
+                "label": "ندفة ثلج"
+              },
+              "options__41": {
+                "label": "نجمة"
+              },
+              "options__42": {
+                "label": "ساعة توقيت"
+              },
+              "options__43": {
+                "label": "شاحنة"
+              },
+              "options__44": {
+                "label": "الغسيل"
+              }
+            }
+          }
+        },
+        "popup": {
+          "name": "نافذة منبثقة",
+          "settings": {
+            "link_label": {
+              "label": "تسمية الرابط",
+              "default": "نص رابط النافذة المنبثقة"
+            },
+            "page": {
+              "label": "الصفحة"
+            }
+          }
+        },
+        "rating": {
+          "name": "تقييم المنتج",
+          "settings": {
+            "paragraph": {
+              "content": "يتطلب تقييم المنتجات تطبيقاً. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types/product-pages#product-rating-block)"
+            }
+          }
+        },
+        "complementary_products": {
+          "name": "منتجات مكمّلة",
+          "settings": {
+            "paragraph": {
+              "content": "أدر المنتجات المكمّلة من [تطبيق البحث والاكتشاف](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)"
+            },
+            "heading": {
+              "label": "العنوان",
+              "default": "يلائم جيداً مع"
+            },
+            "make_collapsible_row": {
+              "label": "صف قابل للطي"
+            },
+            "icon": {
+              "info": "يظهر عند اختيار الصف القابل للطي"
+            },
+            "product_list_limit": {
+              "label": "عدد المنتجات"
+            },
+            "products_per_page": {
+              "label": "المنتجات لكل صفحة"
+            },
+            "pagination_style": {
+              "label": "ترقيم الصفحات",
+              "options": {
+                "option_1": "نقاط",
+                "option_2": "عدّاد",
+                "option_3": "أرقام"
+              }
+            },
+            "product_card": {
+              "heading": "بطاقة المنتج"
+            },
+            "image_ratio": {
+              "label": "نسبة الصورة",
+              "options": {
+                "option_1": "طولي",
+                "option_2": "مربع"
+              }
+            },
+            "enable_quick_add": {
+              "label": "إضافة سريعة"
+            }
+          }
+        },
+        "icon_with_text": {
+          "name": "أيقونة مع نص",
+          "settings": {
+            "layout": {
+              "label": "التخطيط",
+              "options__1": {
+                "label": "أفقي"
+              },
+              "options__2": {
+                "label": "عمودي"
+              }
+            },
+            "pairing_1": {
+              "label": "الزوج 1",
+              "info": "اختر أيقونة أو أضف صورة لكل زوج"
+            },
+            "heading": {
+              "info": "اتركه فارغاً لإخفاء هذا الزوج"
+            },
+            "icon_1": {
+              "label": "أيقونة"
+            },
+            "image_1": {
+              "label": "الصورة"
+            },
+            "heading_1": {
+              "label": "العنوان",
+              "default": "العنوان"
+            },
+            "pairing_2": {
+              "label": "الزوج 2"
+            },
+            "icon_2": {
+              "label": "أيقونة"
+            },
+            "image_2": {
+              "label": "الصورة"
+            },
+            "heading_2": {
+              "label": "العنوان",
+              "default": "العنوان"
+            },
+            "pairing_3": {
+              "label": "الزوج 3"
+            },
+            "icon_3": {
+              "label": "أيقونة"
+            },
+            "image_3": {
+              "label": "الصورة"
+            },
+            "heading_3": {
+              "label": "العنوان",
+              "default": "العنوان"
+            }
+          }
+        }
+      },
+      "settings": {
+        "header": {
+          "content": "الوسائط"
+        },
+        "enable_sticky_info": {
+          "label": "محتوى ثابت"
+        },
+        "gallery_layout": {
+          "label": "التخطيط",
+          "options__1": {
+            "label": "مكدّس"
+          },
+          "options__2": {
+            "label": "عمودان"
+          },
+          "options__3": {
+            "label": "الصور المصغرة"
+          },
+          "options__4": {
+            "label": "شريط الصور المصغرة"
+          }
+        },
+        "constrain_to_viewport": {
+          "label": "التقييد بارتفاع الشاشة"
+        },
+        "media_size": {
+          "label": "العرض",
+          "options__1": {
+            "label": "صغير"
+          },
+          "options__2": {
+            "label": "متوسط"
+          },
+          "options__3": {
+            "label": "كبير"
+          }
+        },
+        "image_zoom": {
+          "label": "التكبير",
+          "options__1": {
+            "label": "فتح العارض المنبثق"
+          },
+          "options__2": {
+            "label": "النقر والتمرير"
+          },
+          "options__3": {
+            "label": "بدون تكبير"
+          }
+        },
+        "media_position": {
+          "label": "الموضع",
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "اليمين"
+          }
+        },
+        "media_fit": {
+          "label": "احتواء",
+          "options__1": {
+            "label": "الأصلي"
+          },
+          "options__2": {
+            "label": "تعبئة"
+          }
+        },
+        "mobile_thumbnails": {
+          "label": "تخطيط الجوال",
+          "options__1": {
+            "label": "عمودان"
+          },
+          "options__2": {
+            "label": "إظهار الصور المصغرة"
+          },
+          "options__3": {
+            "label": "إخفاء الصور المصغرة"
+          }
+        },
+        "hide_variants": {
+          "label": "إخفاء وسائط المتغيرات الأخرى بعد اختيار أحدها"
+        },
+        "enable_video_looping": {
+          "label": "تكرار الفيديو"
+        }
+      }
+    },
+    "main-register": {
+      "name": "التسجيل"
+    },
+    "main-reset-password": {
+      "name": "إعادة تعيين كلمة المرور"
+    },
+    "main-search": {
+      "name": "نتائج البحث",
+      "settings": {
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "columns_mobile": {
+          "label": "أعمدة الجوال",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        },
+        "image_ratio": {
+          "label": "نسبة الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "طولي"
+          },
+          "options__3": {
+            "label": "مربع"
+          }
+        },
+        "show_secondary_image": {
+          "label": "إظهار الصورة الثانية عند التمرير"
+        },
+        "show_vendor": {
+          "label": "المورد"
+        },
+        "show_rating": {
+          "label": "تقييم المنتج",
+          "info": "يتطلب تقييم المنتجات تطبيقاً. [اعرف المزيد](https://help.shopify.com/en/manual/online-store/themes/theme-structure/page-types/search-page)"
+        },
+        "header__1": {
+          "content": "بطاقة المنتج"
+        },
+        "header__2": {
+          "content": "بطاقة المدونة"
+        },
+        "article_show_date": {
+          "label": "التاريخ"
+        },
+        "article_show_author": {
+          "label": "الكاتب"
+        }
+      }
+    },
+    "multicolumn": {
+      "name": "متعدد الأعمدة",
+      "settings": {
+        "title": {
+          "label": "العنوان",
+          "default": "متعدد الأعمدة"
+        },
+        "header_text": {
+          "content": "العنوان"
+        },
+        "header_image": {
+          "content": "الصورة"
+        },
+        "header_layout": {
+          "content": "التخطيط"
+        },
+        "header_button": {
+          "content": "زر"
+        },
+        "image_width": {
+          "label": "العرض",
+          "options__1": {
+            "label": "ثلث عرض العمود"
+          },
+          "options__2": {
+            "label": "نصف عرض العمود"
+          },
+          "options__3": {
+            "label": "العرض الكامل للعمود"
+          }
+        },
+        "image_ratio": {
+          "label": "النسبة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "طولي"
+          },
+          "options__3": {
+            "label": "مربع"
+          },
+          "options__4": {
+            "label": "دائرة"
+          }
+        },
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "column_alignment": {
+          "label": "محاذاة الأعمدة",
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          }
+        },
+        "background_style": {
+          "label": "الخلفية الثانوية",
+          "options__1": {
+            "label": "بلا"
+          },
+          "options__2": {
+            "label": "عرض كخلفية للعمود"
+          }
+        },
+        "button_label": {
+          "label": "التسمية",
+          "default": "نص الزر",
+          "info": "اتركه فارغاً للإخفاء"
+        },
+        "button_link": {
+          "label": "الرابط"
+        },
+        "header_mobile": {
+          "content": "تخطيط الجوال"
+        },
+        "columns_mobile": {
+          "label": "الأعمدة",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        },
+        "swipe_on_mobile": {
+          "label": "شريط دوّار"
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "عمود",
+          "settings": {
+            "image": {
+              "label": "الصورة"
+            },
+            "title": {
+              "label": "العنوان",
+              "default": "عمود"
+            },
+            "text": {
+              "label": "الوصف",
+              "default": "<p>اجمع بين النص والصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي تختاره. أضف تفاصيل عن التوفر أو النمط أو حتى قدّم مراجعة.</p>"
+            },
+            "link_label": {
+              "label": "تسمية الرابط",
+              "info": "اتركه فارغاً للإخفاء"
+            },
+            "link": {
+              "label": "الرابط"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "متعدد الأعمدة"
+      }
+    },
+    "newsletter": {
+      "name": "الاشتراك بالبريد الإلكتروني",
+      "settings": {
+        "full_width": {
+          "label": "عرض كامل"
+        },
+        "paragraph": {
+          "content": "تضيف الاشتراكات [ملفات عملاء](https://help.shopify.com/manual/customers/manage-customers)"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "العنوان",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "اشترك في نشرتنا البريدية"
+            }
+          }
+        },
+        "paragraph": {
+          "name": "النص",
+          "settings": {
+            "paragraph": {
+              "label": "النص",
+              "default": "<p>كن أول من يعلم بالمجموعات الجديدة والعروض الحصرية.</p>"
+            }
+          }
+        },
+        "email_form": {
+          "name": "نموذج البريد الإلكتروني"
+        }
+      },
+      "presets": {
+        "name": "الاشتراك بالبريد الإلكتروني"
+      }
+    },
+    "email-signup-banner": {
+      "name": "بانر الاشتراك بالبريد الإلكتروني",
+      "settings": {
+        "paragraph": {
+          "content": "تضيف الاشتراكات [ملفات عملاء](https://help.shopify.com/manual/customers/manage-customers)"
+        },
+        "image": {
+          "label": "صورة الخلفية"
+        },
+        "image_overlay_opacity": {
+          "label": "شفافية الطبقة العلوية"
+        },
+        "show_background_image": {
+          "label": "إظهار صورة الخلفية"
+        },
+        "show_text_box": {
+          "label": "الحاوية"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "أعلى اليسار"
+          },
+          "options__2": {
+            "label": "أعلى الوسط"
+          },
+          "options__3": {
+            "label": "أعلى اليمين"
+          },
+          "options__4": {
+            "label": "وسط اليسار"
+          },
+          "options__5": {
+            "label": "وسط الوسط"
+          },
+          "options__6": {
+            "label": "وسط اليمين"
+          },
+          "options__7": {
+            "label": "أسفل اليسار"
+          },
+          "options__8": {
+            "label": "أسفل الوسط"
+          },
+          "options__9": {
+            "label": "أسفل اليمين"
+          },
+          "label": "الموضع"
+        },
+        "color_scheme": {
+          "info": "يظهر عند عرض الحاوية."
+        },
+        "image_height": {
+          "label": "الارتفاع",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "صغير"
+          },
+          "options__3": {
+            "label": "متوسط"
+          },
+          "options__4": {
+            "label": "كبير"
+          }
+        },
+        "content_header": {
+          "content": "المحتوى"
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة"
+        },
+        "header": {
+          "content": "تخطيط الجوال"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "المحاذاة"
+        },
+        "show_text_below": {
+          "label": "وضع النص أسفل الصورة"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "العنوان",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "الافتتاح قريباً"
+            }
+          }
+        },
+        "paragraph": {
+          "name": "النص",
+          "settings": {
+            "paragraph": {
+              "label": "النص",
+              "default": "<p>كن أول من يعلم عند إطلاقنا.</p>"
+            },
+            "text_style": {
+              "options__1": {
+                "label": "النص الأساسي"
+              },
+              "options__2": {
+                "label": "العنوان الفرعي"
+              },
+              "label": "النمط"
+            }
+          }
+        },
+        "email_form": {
+          "name": "نموذج البريد الإلكتروني"
+        }
+      },
+      "presets": {
+        "name": "بانر الاشتراك بالبريد الإلكتروني"
+      }
+    },
+    "page": {
+      "name": "الصفحة",
+      "settings": {
+        "page": {
+          "label": "الصفحة"
+        }
+      },
+      "presets": {
+        "name": "الصفحة"
+      }
+    },
+    "quick-order-list": {
+      "name": "قائمة الطلب السريع",
+      "settings": {
+        "variants_per_page": {
+          "label": "المتغيرات لكل صفحة"
+        },
+        "show_image": {
+          "label": "الصور"
+        },
+        "show_sku": {
+          "label": "SKUs"
+        }
+      },
+      "presets": {
+        "name": "قائمة الطلب السريع"
+      }
+    },
+    "related-products": {
+      "name": "منتجات ذات صلة",
+      "settings": {
+        "heading": {
+          "label": "العنوان"
+        },
+        "products_to_show": {
+          "label": "عدد المنتجات"
+        },
+        "columns_desktop": {
+          "label": "الأعمدة"
+        },
+        "paragraph__1": {
+          "content": "يمكن إدارة المنتجات ذات الصلة من [تطبيق البحث والاكتشاف](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)",
+          "default": "يلائم أيضاً"
+        },
+        "header__2": {
+          "content": "بطاقة المنتج"
+        },
+        "image_ratio": {
+          "label": "نسبة الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "طولي"
+          },
+          "options__3": {
+            "label": "مربع"
+          }
+        },
+        "show_secondary_image": {
+          "label": "إظهار الصورة الثانية عند التمرير"
+        },
+        "show_vendor": {
+          "label": "المورد"
+        },
+        "show_rating": {
+          "label": "تقييم المنتج",
+          "info": "يتطلب تقييم المنتجات تطبيقاً. [اعرف المزيد](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-product-recommendations)"
+        },
+        "columns_mobile": {
+          "label": "أعمدة الجوال",
+          "options__1": {
+            "label": "1"
+          },
+          "options__2": {
+            "label": "2"
+          }
+        }
+      }
+    },
+    "rich-text": {
+      "name": "نص منسق",
+      "settings": {
+        "desktop_content_position": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "موضع المحتوى"
+        },
+        "content_alignment": {
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          },
+          "label": "محاذاة المحتوى"
+        },
+        "full_width": {
+          "label": "عرض كامل"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "العنوان",
+          "settings": {
+            "heading": {
+              "label": "العنوان",
+              "default": "تحدث عن علامتك التجارية"
+            }
+          }
+        },
+        "caption": {
+          "name": "وصف مختصر",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "أضف شعاراً"
+            },
+            "text_style": {
+              "label": "النمط",
+              "options__1": {
+                "label": "العنوان الفرعي"
+              },
+              "options__2": {
+                "label": "أحرف كبيرة"
+              }
+            },
+            "caption_size": {
+              "label": "الحجم",
+              "options__1": {
+                "label": "صغير"
+              },
+              "options__2": {
+                "label": "متوسط"
+              },
+              "options__3": {
+                "label": "كبير"
+              }
+            }
+          }
+        },
+        "text": {
+          "name": "النص",
+          "settings": {
+            "text": {
+              "label": "النص",
+              "default": "<p>شارك معلومات عن علامتك التجارية مع عملائك. صف منتجاً أو انشر إعلانات أو رحّب بالعملاء في متجرك.</p>"
+            }
+          }
+        },
+        "buttons": {
+          "name": "الأزرار",
+          "settings": {
+            "header_button1": {
+              "content": "زر 1"
+            },
+            "button_label_1": {
+              "label": "التسمية",
+              "info": "اتركه فارغاً للإخفاء",
+              "default": "نص الزر"
+            },
+            "button_link_1": {
+              "label": "الرابط"
+            },
+            "button_style_secondary_1": {
+              "label": "نمط الحد الخارجي"
+            },
+            "header_button2": {
+              "content": "زر 2"
+            },
+            "button_label_2": {
+              "label": "التسمية",
+              "info": "اترك التسمية فارغة للإخفاء"
+            },
+            "button_link_2": {
+              "label": "الرابط"
+            },
+            "button_style_secondary_2": {
+              "label": "نمط الحد الخارجي"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "نص منسق"
+      }
+    },
+    "video": {
+      "name": "الفيديو",
+      "settings": {
+        "heading": {
+          "label": "العنوان",
+          "default": "الفيديو"
+        },
+        "cover_image": {
+          "label": "صورة الغلاف"
+        },
+        "video": {
+          "label": "الفيديو"
+        },
+        "enable_video_looping": {
+          "label": "تكرار الفيديو"
+        },
+        "header__1": {
+          "content": "فيديو مستضاف على Shopify"
+        },
+        "header__2": {
+          "content": "أو ضمّن فيديو من رابط"
+        },
+        "header__3": {
+          "content": "التخطيط"
+        },
+        "paragraph": {
+          "content": "يظهر عند عدم اختيار فيديو مستضاف على Shopify"
+        },
+        "video_url": {
+          "label": "الرابط",
+          "info": "استخدم رابط يوتيوب أو فيميو"
+        },
+        "description": {
+          "label": "النص البديل للفيديو",
+          "info": "صف الفيديو لمستخدمي قارئ الشاشة"
+        },
+        "image_padding": {
+          "label": "أضف حشوة للصورة",
+          "info": "اختر حشوة الصورة إذا كنت لا تريد اقتصاص صورة الغلاف."
+        },
+        "full_width": {
+          "label": "عرض كامل"
+        }
+      },
+      "presets": {
+        "name": "الفيديو"
+      }
+    },
+    "slideshow": {
+      "name": "شريط العرض",
+      "settings": {
+        "layout": {
+          "label": "التخطيط",
+          "options__1": {
+            "label": "عرض كامل"
+          },
+          "options__2": {
+            "label": "الصفحة"
+          }
+        },
+        "slide_height": {
+          "label": "الارتفاع",
+          "options__1": {
+            "label": "التكيّف مع الصورة الأولى"
+          },
+          "options__2": {
+            "label": "صغير"
+          },
+          "options__3": {
+            "label": "متوسط"
+          },
+          "options__4": {
+            "label": "كبير"
+          }
+        },
+        "slider_visual": {
+          "label": "ترقيم الصفحات",
+          "options__1": {
+            "label": "عدّاد"
+          },
+          "options__2": {
+            "label": "نقاط"
+          },
+          "options__3": {
+            "label": "أرقام"
+          }
+        },
+        "auto_rotate": {
+          "label": "تدوير الشرائح تلقائياً"
+        },
+        "change_slides_speed": {
+          "label": "تغيير الشرائح كل"
+        },
+        "mobile": {
+          "content": "تخطيط الجوال"
+        },
+        "show_text_below": {
+          "label": "وضع النص أسفل الصورة"
+        },
+        "accessibility": {
+          "content": "إمكانية الوصول",
+          "label": "وصف شريط العرض",
+          "info": "صف شريط العرض لمستخدمي قارئ الشاشة",
+          "default": "شريط عرض عن علامتنا التجارية"
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "شريحة",
+          "settings": {
+            "image": {
+              "label": "الصورة"
+            },
+            "heading": {
+              "label": "العنوان",
+              "default": "شريحة صورة"
+            },
+            "subheading": {
+              "label": "العنوان الفرعي",
+              "default": "احكِ قصة علامتك التجارية من خلال الصور"
+            },
+            "header_button": {
+              "content": "زر"
+            },
+            "button_label": {
+              "label": "التسمية",
+              "default": "نص الزر",
+              "info": "اتركه فارغاً للإخفاء"
+            },
+            "link": {
+              "label": "الرابط"
+            },
+            "secondary_style": {
+              "label": "نمط الحد الخارجي"
+            },
+            "box_align": {
+              "label": "موضع المحتوى",
+              "options__1": {
+                "label": "أعلى اليسار"
+              },
+              "options__2": {
+                "label": "أعلى الوسط"
+              },
+              "options__3": {
+                "label": "أعلى اليمين"
+              },
+              "options__4": {
+                "label": "وسط اليسار"
+              },
+              "options__5": {
+                "label": "وسط الوسط"
+              },
+              "options__6": {
+                "label": "وسط اليمين"
+              },
+              "options__7": {
+                "label": "أسفل اليسار"
+              },
+              "options__8": {
+                "label": "أسفل الوسط"
+              },
+              "options__9": {
+                "label": "أسفل اليمين"
+              }
+            },
+            "header_layout": {
+              "content": "التخطيط"
+            },
+            "show_text_box": {
+              "label": "الحاوية"
+            },
+            "text_alignment": {
+              "label": "محاذاة المحتوى",
+              "option_1": {
+                "label": "اليسار"
+              },
+              "option_2": {
+                "label": "الوسط"
+              },
+              "option_3": {
+                "label": "اليمين"
+              }
+            },
+            "image_overlay_opacity": {
+              "label": "شفافية الطبقة العلوية"
+            },
+            "header_text": {
+              "content": "النص"
+            },
+            "header_colors": {
+              "content": "الألوان"
+            },
+            "text_alignment_mobile": {
+              "label": "محاذاة المحتوى على الجوال",
+              "options__1": {
+                "label": "اليسار"
+              },
+              "options__2": {
+                "label": "الوسط"
+              },
+              "options__3": {
+                "label": "اليمين"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "شريط العرض"
+      }
+    },
+    "collapsible_content": {
+      "name": "محتوى قابل للطي",
+      "settings": {
+        "caption": {
+          "label": "وصف مختصر"
+        },
+        "heading": {
+          "label": "العنوان",
+          "default": "محتوى قابل للطي"
+        },
+        "heading_alignment": {
+          "label": "محاذاة العنوان",
+          "options__1": {
+            "label": "اليسار"
+          },
+          "options__2": {
+            "label": "الوسط"
+          },
+          "options__3": {
+            "label": "اليمين"
+          }
+        },
+        "layout_header": {
+          "content": "التخطيط"
+        },
+        "layout": {
+          "label": "الحاوية",
+          "options__1": {
+            "label": "بدون حاوية"
+          },
+          "options__2": {
+            "label": "حاوية الصف"
+          },
+          "options__3": {
+            "label": "حاوية القسم"
+          }
+        },
+        "container_color_scheme": {
+          "label": "نظام ألوان الحاوية"
+        },
+        "section_color_scheme": {
+          "label": "نظام ألوان القسم"
+        },
+        "open_first_collapsible_row": {
+          "label": "فتح الصف الأول"
+        },
+        "header": {
+          "content": "الصورة"
+        },
+        "image": {
+          "label": "الصورة"
+        },
+        "image_ratio": {
+          "label": "نسبة الصورة",
+          "options__1": {
+            "label": "التكيّف مع الصورة"
+          },
+          "options__2": {
+            "label": "صغير"
+          },
+          "options__3": {
+            "label": "كبير"
+          }
+        },
+        "desktop_layout": {
+          "label": "الموضع",
+          "options__1": {
+            "label": "الصورة أولاً"
+          },
+          "options__2": {
+            "label": "الصورة ثانياً"
+          }
+        }
+      },
+      "blocks": {
+        "collapsible_row": {
+          "name": "صف قابل للطي",
+          "settings": {
+            "heading": {
+              "default": "صف قابل للطي",
+              "label": "العنوان"
+            },
+            "row_content": {
+              "label": "محتوى الصف"
+            },
+            "page": {
+              "label": "محتوى الصف من الصفحة"
+            },
+            "icon": {
+              "label": "أيقونة",
+              "options__1": {
+                "label": "بلا"
+              },
+              "options__2": {
+                "label": "تفاحة"
+              },
+              "options__3": {
+                "label": "موزة"
+              },
+              "options__4": {
+                "label": "زجاجة"
+              },
+              "options__5": {
+                "label": "صندوق"
+              },
+              "options__6": {
+                "label": "جزرة"
+              },
+              "options__7": {
+                "label": "فقاعة محادثة"
+              },
+              "options__8": {
+                "label": "علامة صح"
+              },
+              "options__9": {
+                "label": "لوح الكتابة"
+              },
+              "options__10": {
+                "label": "ألبان"
+              },
+              "options__11": {
+                "label": "خالٍ من الألبان"
+              },
+              "options__12": {
+                "label": "مجفف"
+              },
+              "options__13": {
+                "label": "عين"
+              },
+              "options__14": {
+                "label": "نار"
+              },
+              "options__15": {
+                "label": "خالٍ من الغلوتين"
+              },
+              "options__16": {
+                "label": "قلب"
+              },
+              "options__17": {
+                "label": "كي"
+              },
+              "options__18": {
+                "label": "ورقة"
+              },
+              "options__19": {
+                "label": "جلد"
+              },
+              "options__20": {
+                "label": "صاعقة"
+              },
+              "options__21": {
+                "label": "أحمر شفاه"
+              },
+              "options__22": {
+                "label": "قفل"
+              },
+              "options__23": {
+                "label": "دبوس خريطة"
+              },
+              "options__24": {
+                "label": "خالٍ من المكسرات"
+              },
+              "options__25": {
+                "label": "بنطال"
+              },
+              "options__26": {
+                "label": "بصمة قدم"
+              },
+              "options__27": {
+                "label": "فلفل"
+              },
+              "options__28": {
+                "label": "عطر"
+              },
+              "options__29": {
+                "label": "طائرة"
+              },
+              "options__30": {
+                "label": "نبتة"
+              },
+              "options__31": {
+                "label": "بطاقة السعر"
+              },
+              "options__32": {
+                "label": "علامة استفهام"
+              },
+              "options__33": {
+                "label": "إعادة تدوير"
+              },
+              "options__34": {
+                "label": "العودة"
+              },
+              "options__35": {
+                "label": "مسطرة"
+              },
+              "options__36": {
+                "label": "طبق تقديم"
+              },
+              "options__37": {
+                "label": "قميص"
+              },
+              "options__38": {
+                "label": "حذاء"
+              },
+              "options__39": {
+                "label": "ظل شخصية"
+              },
+              "options__40": {
+                "label": "ندفة ثلج"
+              },
+              "options__41": {
+                "label": "نجمة"
+              },
+              "options__42": {
+                "label": "ساعة توقيت"
+              },
+              "options__43": {
+                "label": "شاحنة"
+              },
+              "options__44": {
+                "label": "الغسيل"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "محتوى قابل للطي"
+      }
+    },
+    "disclosures": {
+      "name": "البيانات القابلة للطي",
+      "settings": {
+        "paragraph": {
+          "content": "تحذيرات السلامة والإفصاحات التنظيمية المطلوبة لهذا المنتج."
+        },
+        "heading": {
+          "label": "العنوان"
+        },
+        "open_by_default": {
+          "label": "مفتوح افتراضياً"
+        }
+      }
+    }
+  }
+}

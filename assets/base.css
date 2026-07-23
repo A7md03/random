@@ -3751,3 +3751,28 @@ details-disclosure > details {
 span.active-facets__button-inner {
   border-radius: 0;
 }
+
+/* Product page RTL - media thumbnails, quantity selector, price layout */
+[dir="rtl"] .product__media-list,
+[dir="rtl"] .thumbnail-list {
+  direction: rtl;
+}
+
+[dir="rtl"] .quantity {
+  direction: rtl;
+}
+
+[dir="rtl"] .product__info-wrapper,
+[dir="rtl"] .product-meta {
+  text-align: right;
+}
+
+[dir="rtl"] .price {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .product__accordion .icon-caret,
+[dir="rtl"] .accordion .icon-caret {
+  transform: scaleX(-1);
+}
