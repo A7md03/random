@@ -1,0 +1,247 @@
+{% comment %}
+  Renders a UGC / Instagram-style image grid section. Dawn has no built-in
+  equivalent, so this is a small purpose-built section for Many Things.
+{% endcomment %}
+
+{%- style -%}
+  .ugc-gallery-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ugc-gallery-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .ugc-gallery-{{ section.id }} .ugc-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ugc-gallery-{{ section.id }} .ugc-gallery__grid {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+      gap: 0.8rem;
+    }
+  }
+
+  .ugc-gallery-{{ section.id }} .ugc-gallery__item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(var(--color-foreground), 0.06);
+  }
+
+  .ugc-gallery-{{ section.id }} .ugc-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--duration-long, 0.35s) ease;
+  }
+
+  .ugc-gallery-{{ section.id }} .ugc-gallery__item:hover img {
+    transform: scale(1.05);
+  }
+
+  .ugc-gallery-{{ section.id }} .ugc-gallery__item-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #ffffff;
+    filter: drop-shadow(0 0.1rem 0.3rem rgba(13, 13, 13, 0.6));
+  }
+
+  [dir="rtl"] .ugc-gallery-{{ section.id }} .ugc-gallery__item-icon {
+    right: auto;
+    left: 1rem;
+  }
+
+  .ugc-gallery-{{ section.id }} .ugc-gallery__heading-wrapper {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .ugc-gallery-{{ section.id }} .ugc-gallery__subheading {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+{%- endstyle -%}
+
+<div class="ugc-gallery-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="ugc-gallery__heading-wrapper">
+      {%- if section.settings.subheading != blank -%}
+        <p class="ugc-gallery__subheading">{{ section.settings.subheading | escape }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="ugc-gallery__heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+    </div>
+
+    <div class="ugc-gallery__grid">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          {%- capture sizes -%}
+            (min-width: 750px) calc((100vw - 10rem) / {{ section.settings.columns_desktop }}), calc((100vw - 4rem) / 2)
+          {%- endcapture -%}
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="ugc-gallery__item"
+              {% if block.settings.open_in_new_tab %}
+                target="_blank"
+                rel="noopener"
+              {% endif %}
+              {{ block.shopify_attributes }}
+            >
+          {%- else -%}
+            <div class="ugc-gallery__item" {{ block.shopify_attributes }}>
+          {%- endif -%}
+
+          {{
+            block.settings.image
+            | image_url: width: 1500
+            | image_tag:
+              widths: '200, 400, 600, 800, 1000, 1200, 1500',
+              sizes: sizes,
+              alt: block.settings.image_alt,
+              loading: 'lazy'
+          }}
+
+          {%- if block.settings.link != blank -%}
+            <span class="ugc-gallery__item-icon svg-wrapper" aria-hidden="true">{{ 'icon-instagram.svg' | inline_asset_content }}</span>
+            </a>
+          {%- else -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "UGC gallery",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "#ManyThings",
+      "label": "Subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Tag us, we might repost you",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "default": 5,
+      "label": "Columns on desktop"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Alt text",
+          "info": "Describe the image for accessibility and SEO"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Link to the Instagram/TikTok post, or leave blank"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_in_new_tab",
+          "label": "Open link in a new tab",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UGC gallery",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}
