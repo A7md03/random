@@ -1,0 +1,9 @@
+.dawn-src/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Shopify CLI
+.shopify/
+*.log
