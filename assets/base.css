@@ -3746,3 +3746,8 @@ details-disclosure > details {
 [dir="rtl"] .button .icon-arrow {
   transform: rotate(180deg);
 }
+
+/* Collection filters - sharp active-filter chips to match brand */
+span.active-facets__button-inner {
+  border-radius: 0;
+}

@@ -2810,7 +2810,7 @@
         },
         "paragraph__1": {
           "content": "Related products can be managed in the [Search & Discovery app](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)",
-          "default": "You may also like"
+          "default": "Goes Well With"
         },
         "header__2": {
           "content": "Product card"
