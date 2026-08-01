@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title>Product — WEBSTRIKE</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='42' r='14' fill='%23e0161f'/%3E%3Ccircle cx='50' cy='64' r='20' fill='%23e0161f'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop.html?category=apparel">Apparel</a></li>
+        <li><a href="shop.html?category=accessories">Accessories</a></li>
+        <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4 2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="product-root"></div>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <h2>You Might Also Like</h2>
+      </div>
+      <div class="product-grid" data-related-grid></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+        <p>Original spider-hero streetwear and collectibles, designed for the rooftops and everything below them.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?category=apparel">Apparel</a></li>
+          <li><a href="shop.html?category=accessories">Accessories</a></li>
+          <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Track My Order</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>&copy; 2026 WEBSTRIKE. All rights reserved.</span>
+      <span>Independent original brand — not affiliated with Marvel or any other publisher.</span>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll("[data-logo-icon]").forEach((el) => (el.innerHTML = spiderMarkSVG()));
+
+    function productCardHTML(p) {
+      return `
+        <a class="product-card" href="product.html?id=${p.id}">
+          <div class="product-media" style="background: linear-gradient(150deg, ${p.colorway[0]}, ${p.colorway[1]})">
+            ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
+            ${spiderMarkSVG()}
+          </div>
+          <div class="product-info">
+            <span class="product-category">${p.category}</span>
+            <span class="product-name">${p.name}</span>
+            <span class="product-price">$${p.price}</span>
+          </div>
+        </a>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const product = getProductById(params.get("id"));
+    const root = document.getElementById("product-root");
+
+    if (!product) {
+      root.innerHTML = `
+        <div class="empty-state">
+          ${spiderMarkSVG()}
+          <h2>Product Not Found</h2>
+          <p>That item doesn't exist or may have been retired.</p>
+          <a href="shop.html" class="btn btn-primary">Back to Shop</a>
+        </div>`;
+    } else {
+      document.title = `${product.name} — WEBSTRIKE`;
+      document.querySelector("[data-title]").textContent = `${product.name} — WEBSTRIKE`;
+
+      let selectedSize = product.sizes[0];
+      let qty = 1;
+
+      root.innerHTML = `
+        <div class="product-detail">
+          <div class="product-detail-media" style="background: linear-gradient(150deg, ${product.colorway[0]}, ${product.colorway[1]})">
+            ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
+            ${spiderMarkSVG()}
+          </div>
+          <div class="product-detail-info">
+            <span class="product-category">${product.category}</span>
+            <h1>${product.name}</h1>
+            <div class="product-detail-price">$${product.price}</div>
+
+            <span class="option-label">Size</span>
+            <div class="size-options" data-size-options>
+              ${product.sizes
+                .map(
+                  (s, i) =>
+                    `<button type="button" class="size-btn ${i === 0 ? "active" : ""}" data-size="${s}">${s}</button>`
+                )
+                .join("")}
+            </div>
+
+            <span class="option-label">Quantity</span>
+            <div class="qty-row">
+              <div class="qty-control">
+                <button type="button" data-qty-down aria-label="Decrease quantity">&minus;</button>
+                <span data-qty-value>1</span>
+                <button type="button" data-qty-up aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <div class="detail-actions">
+              <button type="button" class="btn btn-primary btn-block" data-add-to-cart>Add to Cart</button>
+            </div>
+            <div class="add-confirm" data-add-confirm>&#10003; Added to cart</div>
+
+            <div class="product-detail-desc">
+              <span class="option-label">Details</span>
+              <p>${product.description}</p>
+            </div>
+          </div>
+        </div>`;
+
+      root.querySelectorAll("[data-size]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          selectedSize = btn.dataset.size;
+          root.querySelectorAll("[data-size]").forEach((b) => b.classList.toggle("active", b === btn));
+        });
+      });
+
+      const qtyValue = root.querySelector("[data-qty-value]");
+      root.querySelector("[data-qty-up]").addEventListener("click", () => {
+        qty += 1;
+        qtyValue.textContent = qty;
+      });
+      root.querySelector("[data-qty-down]").addEventListener("click", () => {
+        qty = Math.max(1, qty - 1);
+        qtyValue.textContent = qty;
+      });
+
+      const confirm = root.querySelector("[data-add-confirm]");
+      root.querySelector("[data-add-to-cart]").addEventListener("click", () => {
+        addToCart(product.id, selectedSize, qty);
+        confirm.classList.add("visible");
+        setTimeout(() => confirm.classList.remove("visible"), 2000);
+      });
+
+      const related = PRODUCTS.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 4);
+      document.querySelector("[data-related-grid]").innerHTML = related.map(productCardHTML).join("");
+    }
+  </script>
+</body>
+</html>

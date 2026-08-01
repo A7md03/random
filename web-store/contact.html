@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — WEBSTRIKE</title>
+  <meta name="description" content="Get in touch with WEBSTRIKE — order help, shipping questions, and more." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='42' r='14' fill='%23e0161f'/%3E%3Ccircle cx='50' cy='64' r='20' fill='%23e0161f'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop.html?category=apparel">Apparel</a></li>
+        <li><a href="shop.html?category=accessories">Accessories</a></li>
+        <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4 2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <h1>Get In Touch</h1>
+    <p>Questions about an order, sizing, or a bulk request? Send it over.</p>
+  </div>
+
+  <div class="content-wrap" style="max-width:560px;">
+    <div class="form-success" data-form-success>Thanks — your message has been received. We'll get back to you within 1–2 business days.</div>
+    <form class="form-grid" data-contact-form>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option>Order Status</option>
+          <option>Sizing Help</option>
+          <option>Returns &amp; Exchanges</option>
+          <option>Wholesale / Bulk</option>
+          <option>Something Else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+    </form>
+
+    <h2 style="margin-top:56px;">Shipping &amp; Returns</h2>
+    <p style="color:var(--muted);">Orders ship within 2–3 business days. Unworn items in original packaging can be returned within 30 days of delivery for a full refund.</p>
+
+    <h2>Track My Order</h2>
+    <p style="color:var(--muted);">Tracking links are emailed once your order ships. You can also view order history any time from your account.</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+        <p>Original spider-hero streetwear and collectibles, designed for the rooftops and everything below them.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?category=apparel">Apparel</a></li>
+          <li><a href="shop.html?category=accessories">Accessories</a></li>
+          <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Track My Order</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>&copy; 2026 WEBSTRIKE. All rights reserved.</span>
+      <span>Independent original brand — not affiliated with Marvel or any other publisher.</span>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll("[data-logo-icon]").forEach((el) => (el.innerHTML = spiderMarkSVG()));
+
+    const form = document.querySelector("[data-contact-form]");
+    const success = document.querySelector("[data-form-success]");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      success.classList.add("visible");
+      form.reset();
+      success.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  </script>
+</body>
+</html>

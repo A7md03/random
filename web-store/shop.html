@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop All Gear — WEBSTRIKE</title>
+  <meta name="description" content="Shop the full WEBSTRIKE catalog: apparel, accessories, and collectibles." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='42' r='14' fill='%23e0161f'/%3E%3Ccircle cx='50' cy='64' r='20' fill='%23e0161f'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="shop.html?category=apparel">Apparel</a></li>
+        <li><a href="shop.html?category=accessories">Accessories</a></li>
+        <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4 2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <h1>Shop All Gear</h1>
+    <p>Apparel, accessories, and collectibles built for the rooftops.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar" data-filter-bar>
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="apparel">Apparel</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+        <button class="filter-btn" data-filter="collectibles">Collectibles</button>
+      </div>
+      <div class="product-grid" data-shop-grid></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+        <p>Original spider-hero streetwear and collectibles, designed for the rooftops and everything below them.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?category=apparel">Apparel</a></li>
+          <li><a href="shop.html?category=accessories">Accessories</a></li>
+          <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Track My Order</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>&copy; 2026 WEBSTRIKE. All rights reserved.</span>
+      <span>Independent original brand — not affiliated with Marvel or any other publisher.</span>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll("[data-logo-icon]").forEach((el) => (el.innerHTML = spiderMarkSVG()));
+
+    function productCardHTML(p) {
+      return `
+        <a class="product-card" href="product.html?id=${p.id}">
+          <div class="product-media" style="background: linear-gradient(150deg, ${p.colorway[0]}, ${p.colorway[1]})">
+            ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
+            ${spiderMarkSVG()}
+          </div>
+          <div class="product-info">
+            <span class="product-category">${p.category}</span>
+            <span class="product-name">${p.name}</span>
+            <span class="product-price">$${p.price}</span>
+          </div>
+        </a>`;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    let activeCategory = params.get("category") || "all";
+
+    const grid = document.querySelector("[data-shop-grid]");
+    const buttons = document.querySelectorAll("[data-filter]");
+
+    function render() {
+      buttons.forEach((b) => b.classList.toggle("active", b.dataset.filter === activeCategory));
+      grid.innerHTML = getProductsByCategory(activeCategory).map(productCardHTML).join("");
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        activeCategory = btn.dataset.filter;
+        const url = new URL(window.location);
+        if (activeCategory === "all") url.searchParams.delete("category");
+        else url.searchParams.set("category", activeCategory);
+        history.replaceState({}, "", url);
+        render();
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>

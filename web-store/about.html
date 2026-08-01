@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — WEBSTRIKE</title>
+  <meta name="description" content="The story behind WEBSTRIKE — original spider-hero streetwear built for rooftop nights." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='42' r='14' fill='%23e0161f'/%3E%3Ccircle cx='50' cy='64' r='20' fill='%23e0161f'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop.html?category=apparel">Apparel</a></li>
+        <li><a href="shop.html?category=accessories">Accessories</a></li>
+        <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4 2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>
+          <span class="cart-badge" data-cart-count hidden>0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <h1>Our Story</h1>
+    <p>Built by people who'd rather take the rooftops than the sidewalk.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h2 style="color:var(--white); font-size:32px;">Started On A Ledge, Not In A Boardroom</h2>
+      <p>WEBSTRIKE started as a small print run of hoodies for a rooftop-running crew who wanted gear that actually looked like it belonged up there — heavyweight, weatherproof, and cut for movement, not a mall rack.</p>
+      <p>Every piece carries the same crimson-and-black signature and the spider-mark that's become our shorthand for "built for the climb." No licensed characters, no shortcuts — just original design, made for people who move through the city differently.</p>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="num">40+</div><div class="label">Original Designs</div></div>
+        <div class="stat-box"><div class="num">12K</div><div class="label">Rooftop Crew Members</div></div>
+        <div class="stat-box"><div class="num">2019</div><div class="label">Founded</div></div>
+      </div>
+    </div>
+    <div class="product-detail-media" style="background: linear-gradient(150deg, #1a0507, #7a0f1a); aspect-ratio: 4/5;">
+      <span data-hero-icon></span>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="max-width:760px;">
+      <h2 style="color:var(--white); font-size:28px; text-align:center;">What We Stand For</h2>
+      <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="stat-box" style="text-align:left;">
+          <div class="label" style="margin-bottom:8px;">Built For Motion</div>
+          <p style="margin:0; font-size:14px;">Every cut is tested for movement first — reinforced seams, articulated sleeves, gear that keeps up.</p>
+        </div>
+        <div class="stat-box" style="text-align:left;">
+          <div class="label" style="margin-bottom:8px;">Original, Always</div>
+          <p style="margin:0; font-size:14px;">Every design on this site is ours — no licensed characters, no borrowed logos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="icon-spider-wrap" data-logo-icon></span>WEB<span>STRIKE</span></a>
+        <p>Original spider-hero streetwear and collectibles, designed for the rooftops and everything below them.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?category=apparel">Apparel</a></li>
+          <li><a href="shop.html?category=accessories">Accessories</a></li>
+          <li><a href="shop.html?category=collectibles">Collectibles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+          <li><a href="contact.html">Track My Order</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <span>&copy; 2026 WEBSTRIKE. All rights reserved.</span>
+      <span>Independent original brand — not affiliated with Marvel or any other publisher.</span>
+    </div>
+  </footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll("[data-logo-icon]").forEach((el) => (el.innerHTML = spiderMarkSVG()));
+    document.querySelectorAll("[data-hero-icon]").forEach((el) => {
+      el.innerHTML = spiderMarkSVG();
+      el.style.width = "45%";
+      el.style.color = "rgba(255,255,255,0.18)";
+    });
+  </script>
+</body>
+</html>
