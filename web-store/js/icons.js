@@ -31,6 +31,13 @@ function webCrackSVG() {
   </svg>`;
 }
 
+function productMediaHTML(p) {
+  if (p.image) {
+    return `<img src="${p.image}" alt="${p.name}" class="product-photo" loading="lazy" />`;
+  }
+  return spiderMarkSVG();
+}
+
 function categoryIcon(kind) {
   switch (kind) {
     case "mask":

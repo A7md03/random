@@ -90,7 +90,7 @@
         <a class="product-card" href="product.html?id=${p.id}">
           <div class="product-media" style="background: linear-gradient(150deg, ${p.colorway[0]}, ${p.colorway[1]})">
             ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
-            ${spiderMarkSVG()}
+            ${productMediaHTML(p)}
           </div>
           <div class="product-info">
             <span class="product-category">${p.category}</span>
@@ -123,7 +123,7 @@
         <div class="product-detail">
           <div class="product-detail-media" style="background: linear-gradient(150deg, ${product.colorway[0]}, ${product.colorway[1]})">
             ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
-            ${spiderMarkSVG()}
+            ${productMediaHTML(product)}
           </div>
           <div class="product-detail-info">
             <span class="product-category">${product.category}</span>

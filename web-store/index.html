@@ -135,7 +135,7 @@
         <a class="product-card" href="product.html?id=${p.id}">
           <div class="product-media" style="background: linear-gradient(150deg, ${p.colorway[0]}, ${p.colorway[1]})">
             ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
-            ${spiderMarkSVG()}
+            ${productMediaHTML(p)}
           </div>
           <div class="product-info">
             <span class="product-category">${p.category}</span>
