@@ -155,6 +155,7 @@
                             {%- endfor -%}
                           {%- endif -%}
 
+                          {%- assign previewable_uploads = 'jpg,jpeg,png,webp,gif' | split: ',' -%}
                           {%- for property in item.properties -%}
                             {%- assign property_first_char = property.first | slice: 0 -%}
                             {%- if property.last != blank and property_first_char != '_' -%}
@@ -162,8 +163,28 @@
                                 <dt>{{ property.first }}:</dt>
                                 <dd>
                                   {%- if property.last contains '/uploads/' -%}
-                                    <a href="{{ property.last }}" class="link" target="_blank">
-                                      {{ property.last | split: '/' | last }}
+                                    {%- assign uploaded_file_name = property.last | split: '/' | last -%}
+                                    {%- assign uploaded_file_type = uploaded_file_name
+                                      | split: '.'
+                                      | last
+                                      | downcase
+                                    -%}
+                                    <a
+                                      href="{{ property.last }}"
+                                      class="link cart-item__uploaded-file"
+                                      target="_blank"
+                                    >
+                                      {%- if previewable_uploads contains uploaded_file_type -%}
+                                        <img
+                                          src="{{ property.last }}"
+                                          alt="{{ 'products.product.photo_upload.cart_preview_alt' | t }}"
+                                          class="cart-item__uploaded-image"
+                                          width="40"
+                                          height="40"
+                                          loading="lazy"
+                                        >
+                                      {%- endif -%}
+                                      <span>{{ uploaded_file_name }}</span>
                                     </a>
                                   {%- else -%}
                                     {{ property.last }}

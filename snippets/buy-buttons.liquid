@@ -36,11 +36,16 @@
         <span class="product-form__error-message"></span>
       </div>
 
+      {%- comment -%}
+        enctype is required so the customer photo upload block (a
+        `properties[...]` file input) still submits if JavaScript fails.
+      {%- endcomment -%}
       {%- form 'product',
         product,
         id: product_form_id,
         class: 'form',
         novalidate: 'novalidate',
+        enctype: 'multipart/form-data',
         data-type: 'add-to-cart-form'
       -%}
         <input

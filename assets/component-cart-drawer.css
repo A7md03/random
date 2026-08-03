@@ -412,3 +412,20 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     margin-left: 0;
   }
 }
+
+/* Customer-uploaded photo (line item property file) */
+
+.cart-drawer .cart-item__uploaded-file {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.cart-drawer .cart-item__uploaded-image {
+  width: 3.6rem;
+  height: 3.6rem;
+  object-fit: cover;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  flex-shrink: 0;
+}

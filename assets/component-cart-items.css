@@ -622,3 +622,20 @@ cart-remove-button .icon-remove {
     padding-left: 0;
   }
 }
+
+/* Customer-uploaded photo (line item property file) */
+
+.cart-item__uploaded-file {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.cart-item__uploaded-image {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  flex-shrink: 0;
+}

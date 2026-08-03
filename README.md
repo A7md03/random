@@ -17,12 +17,70 @@ click-to-chat button, and a complete Arabic (RTL) translation.
 - New snippets: `snippets/whatsapp-button.liquid` +
   `snippets/icon-whatsapp.liquid` (floating WhatsApp button, renders nothing
   to customers until a WhatsApp number is set in the theme customizer).
+- **Customer photo upload** for custom-printed products —
+  `snippets/photo-upload.liquid`, `assets/photo-upload.js`,
+  `assets/component-photo-upload.css` and the `photo_upload` product block in
+  `sections/main-product.liquid`. See "Custom phone cases" below.
 - New page templates: `templates/page.about-us.json`,
   `templates/page.faq.json`, `templates/page.shipping-returns.json`,
   `templates/page.track-order.json`, plus a reskinned
   `templates/page.contact.json` with a WhatsApp CTA.
 - `locales/ar.json` + `locales/ar.schema.json`: complete Arabic translation
   (every key from the English locale files has a matching Arabic key).
+
+## Custom phone cases (customer photo upload)
+
+Customers pick their own photo on the product page and it is attached to the
+order — no app and no subscription. It uses Shopify's built-in support for
+**file line item properties**: the file input posts to `/cart/add`, Shopify
+stores the image on its CDN, and the link shows up on the cart, on the order
+confirmation, and on the order in **Admin → Orders**, where you download it to
+print.
+
+What the customer gets on the product page:
+
+- Drag and drop or browse for a photo.
+- A live preview inside a phone-case frame with a camera cut-out and a dashed
+  trim guide, so they can see what will be cropped.
+- Drag to reposition and a zoom slider. The framing is saved with the order as
+  a hidden `_Print position` property — customers never see it, but your team
+  does on the order in the admin.
+- Immediate, translated errors for files that are too big or the wrong type,
+  and a soft warning when a photo is below the resolution you set (it still
+  uploads — the customer is just told the print may look soft).
+- An optional free-text note field ("Any instructions for us?").
+- Add to cart is blocked until a photo is attached (this is a setting). The
+  dynamic checkout button is blocked at the same time, since it would
+  otherwise skip straight to checkout without the photo.
+
+### Setting it up for a product
+
+1. In **Admin → Products**, open the custom case product and set its theme
+   template to **product.custom-case** (Online store → Theme template).
+2. That template already has the upload block placed above the quantity
+   selector, plus a "How Custom Printing Works" section and photo tips.
+3. To change the wording, requirements or limits, open the product in the
+   theme customizer and select the **Customer photo upload** block. To add it
+   to any other product page, add that block from the customizer.
+
+To make the block available on the *default* product template instead, add a
+`photo_upload` block to `templates/product.json` the same way
+`templates/product.custom-case.json` does — but note that would then ask every
+product for a photo, including stickers.
+
+### Limits worth knowing
+
+- **20 MB per file** is Shopify's hard limit; the block's maximum is capped
+  there. Modern phone photos are well under it, but a scan or a RAW export can
+  exceed it — the customer gets a clear message rather than a failed add.
+- **HEIC/HEIF** (the default iPhone format) uploads fine and is accepted, but
+  most desktop browsers cannot decode it, so those customers see a file card
+  without a visual preview. iPhones send JPEG through Safari in most cases.
+- The customer can attach **one photo per cart line**. If they order two
+  different cases, they add them separately — quantity 2 on one line means the
+  same photo twice.
+- The uploaded file is what gets printed; the zoom/position is guidance for
+  your production team, not a server-side crop.
 
 ## Deploying
 
@@ -48,6 +106,14 @@ preview changes locally against the dev store before pushing.
       the Contact, Shipping & Returns, and Track My Order pages with the same
       real WhatsApp number (search the theme for `TODO_WHATSAPP_NUMBER`).
 - [ ] Set social links in **Theme settings → Social media**.
+- [ ] Assign the **product.custom-case** template to every product that is
+      printed with the customer's own photo (**Admin → Products → [product] →
+      Online store → Theme template**), then check the wording of the upload
+      block in the theme customizer.
+- [ ] Decide whether **Buy it now** should stay off on custom case products.
+      It is off in `product.custom-case` on purpose: it skips the cart, and a
+      customer who has not uploaded a photo yet would land straight in
+      checkout.
 - [ ] Add real product photos and copy — homepage, collection, and product
       pages currently use realistic **placeholder copy** (per the client's
       own instruction to use placeholders for now), and the About Us page

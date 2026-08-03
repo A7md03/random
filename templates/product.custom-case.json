@@ -1,0 +1,211 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title"
+        },
+        "price": {
+          "type": "price"
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "photo_upload": {
+          "type": "photo_upload",
+          "settings": {
+            "heading": "Upload your photo",
+            "description": "<p>Pick the photo you want printed on your case, then drag it around and zoom until it sits the way you like. Use the original photo if you can — images saved from chat apps are compressed and can print blurry.</p>",
+            "property_label": "Your photo",
+            "require_photo": true,
+            "max_file_size": 20,
+            "file_extensions": "jpg,jpeg,png,webp,heic,heif",
+            "min_width": 1000,
+            "min_height": 1500,
+            "show_note": true,
+            "note_label": "Any instructions for us? (optional)",
+            "note_property_label": "Instructions"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector"
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description"
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "photo_upload",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_position": "left",
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "disclosures": {
+      "type": "disclosures",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "how-it-works": {
+      "type": "multicolumn",
+      "blocks": {
+        "step-1": {
+          "type": "column",
+          "settings": {
+            "title": "1. Upload your photo",
+            "text": "<p>Choose the photo you want on your case and drag it into place. We will tell you straight away if the file is too small to print sharply.</p>"
+          }
+        },
+        "step-2": {
+          "type": "column",
+          "settings": {
+            "title": "2. We check it by hand",
+            "text": "<p>Our team reviews every photo before printing. If anything looks off, we message you on WhatsApp before we start.</p>"
+          }
+        },
+        "step-3": {
+          "type": "column",
+          "settings": {
+            "title": "3. Printed and shipped",
+            "text": "<p>Your case is printed, cured and packed within 1-2 working days, then shipped across the UAE.</p>"
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3"],
+      "settings": {
+        "title": "How Custom Printing Works",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-info-accordion": {
+      "type": "collapsible-content",
+      "blocks": {
+        "photo-tips": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Photo Tips",
+            "icon": "check_mark",
+            "row_content": "<p>Send us the original photo whenever you can. Photos forwarded through chat apps are compressed and can look soft once they are printed at full size.</p><p>Aim for at least 1000 x 1500 pixels. Keep faces away from the very edges and the camera cut-out - anything in the dashed area of the preview may be trimmed when the case is cut.</p>",
+            "page": ""
+          }
+        },
+        "material-care": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Material & Care",
+            "icon": "box",
+            "row_content": "<p>Our phone cases are made from durable, shock-absorbent polycarbonate and TPU with a scratch-resistant UV print. Your photo is printed directly onto the case, so it will not peel off.</p><p>Wipe clean with a soft, slightly damp cloth. Avoid harsh solvents and prolonged direct sunlight to keep colors looking fresh.</p>",
+            "page": ""
+          }
+        },
+        "size-guide": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Size Guide",
+            "icon": "ruler",
+            "row_content": "<p>Select your exact phone model before adding to cart so your case is cut precisely for your camera, buttons and ports.</p><p>Not sure which model you have? Check Settings &gt; General &gt; About on your phone, or message us on WhatsApp and we will help you pick.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": ["photo-tips", "material-care", "size-guide"],
+      "settings": {
+        "caption": "",
+        "heading": "Good to Know",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "disclosures",
+    "how-it-works",
+    "product-info-accordion",
+    "related-products"
+  ]
+}

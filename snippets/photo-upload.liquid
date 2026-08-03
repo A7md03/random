@@ -1,0 +1,161 @@
+{% comment %}
+  Renders the customer photo upload field for custom-printed products.
+
+  The file input is a Shopify line item property, so the uploaded image is
+  attached to the cart line and shows up on the order in the admin — no app
+  required. The input lives outside the <form> (it is rendered as a product
+  block), so it is tied to the form with the `form` attribute, the same way
+  Dawn handles the quantity selector.
+
+  Accepts:
+  - block: {Object} the `photo_upload` block.
+  - product_form_id: {String} id of the product form the input belongs to.
+  - section_id: {String} id of the section this snippet belongs to.
+
+  Usage:
+  {% render 'photo-upload', block: block, product_form_id: product_form_id, section_id: section.id %}
+{% endcomment %}
+
+{{ 'component-photo-upload.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'photo-upload.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign property_label = block.settings.property_label | default: 'Your photo'
+  assign max_file_size = block.settings.max_file_size | default: 20
+  assign extensions = block.settings.file_extensions | default: 'jpg,jpeg,png,webp,heic,heif' | replace: ' ', ''
+  assign extension_list = extensions | split: ','
+  assign accept_list = ''
+  for extension in extension_list
+    assign accept_list = accept_list | append: '.' | append: extension | append: ','
+  endfor
+  assign accept_list = accept_list | append: 'image/*'
+
+  assign extensions_display = extensions | replace: ',', ', ' | upcase
+  assign min_width = block.settings.min_width
+  assign min_height = block.settings.min_height
+
+  assign size_error = 'products.product.photo_upload.error_size' | t: size: max_file_size
+  assign type_error = 'products.product.photo_upload.error_type' | t: formats: extensions_display
+  assign resolution_warning = 'products.product.photo_upload.warning_resolution' | t: width: min_width, height: min_height
+  assign hint = 'products.product.photo_upload.hint' | t: formats: extensions_display, size: max_file_size
+-%}
+
+<photo-upload
+  class="photo-upload"
+  id="PhotoUpload-{{ section_id }}-{{ block.id }}"
+  data-form-id="{{ product_form_id }}"
+  data-required="{{ block.settings.require_photo }}"
+  data-max-file-size="{{ max_file_size }}"
+  data-min-width="{{ block.settings.min_width }}"
+  data-min-height="{{ block.settings.min_height }}"
+  data-extensions="{{ extensions }}"
+  data-error-required="{{ 'products.product.photo_upload.error_required' | t | escape }}"
+  data-error-size="{{ size_error | escape }}"
+  data-error-type="{{ type_error | escape }}"
+  data-warning-resolution="{{ resolution_warning | escape }}"
+  {{ block.shopify_attributes }}
+>
+  {%- if block.settings.heading != blank -%}
+    <h2 class="photo-upload__heading">
+      {{- block.settings.heading | escape -}}
+      {%- if block.settings.require_photo %}
+        <span class="photo-upload__required-mark" aria-hidden="true">*</span>
+      {%- endif -%}
+    </h2>
+  {%- endif -%}
+
+  {%- if block.settings.description != blank -%}
+    <div class="photo-upload__description rte">{{ block.settings.description }}</div>
+  {%- endif -%}
+
+  <label
+    class="photo-upload__dropzone"
+    for="PhotoUploadInput-{{ section_id }}-{{ block.id }}"
+    data-photo-dropzone
+  >
+    <span class="svg-wrapper photo-upload__dropzone-icon">
+      {{- 'icon-photo-upload.svg' | inline_asset_content -}}
+    </span>
+    <span class="photo-upload__dropzone-label photo-upload__dropzone-label--select">
+      {{ 'products.product.photo_upload.select' | t }}
+    </span>
+    <span class="photo-upload__dropzone-label photo-upload__dropzone-label--change">
+      {{ 'products.product.photo_upload.change' | t }}
+    </span>
+    <span class="photo-upload__dropzone-hint">{{ hint }}</span>
+
+    <input
+      type="file"
+      class="photo-upload__input"
+      id="PhotoUploadInput-{{ section_id }}-{{ block.id }}"
+      name="properties[{{ property_label | escape }}]"
+      form="{{ product_form_id }}"
+      accept="{{ accept_list }}"
+      data-photo-input
+    >
+  </label>
+
+  <div class="photo-upload__preview" data-photo-preview hidden>
+    <div class="photo-upload__frame" data-photo-frame>
+      <img class="photo-upload__image" alt="" data-photo-image hidden>
+    </div>
+
+    <div class="photo-upload__details">
+      <p class="photo-upload__filename" data-photo-filename></p>
+      <p class="photo-upload__filemeta" data-photo-filemeta></p>
+
+      <div class="photo-upload__adjustments" data-photo-adjustments hidden>
+        <label class="photo-upload__zoom-label" for="PhotoUploadZoom-{{ section_id }}-{{ block.id }}">
+          {{ 'products.product.photo_upload.zoom' | t }}
+        </label>
+        <input
+          class="photo-upload__zoom"
+          id="PhotoUploadZoom-{{ section_id }}-{{ block.id }}"
+          type="range"
+          min="1"
+          max="3"
+          step="0.05"
+          value="1"
+          data-photo-zoom
+        >
+        <p class="photo-upload__drag-hint">{{ 'products.product.photo_upload.drag_hint' | t }}</p>
+      </div>
+
+      <button type="button" class="photo-upload__remove" data-photo-remove>
+        {{ 'products.product.photo_upload.remove' | t }}
+      </button>
+    </div>
+  </div>
+
+  <p class="photo-upload__message photo-upload__message--error" role="alert" data-photo-error hidden></p>
+  <p class="photo-upload__message photo-upload__message--warning" data-photo-warning hidden></p>
+
+  {%- if block.settings.show_note -%}
+    <div class="photo-upload__note">
+      <label class="photo-upload__note-label" for="PhotoUploadNote-{{ section_id }}-{{ block.id }}">
+        {{ block.settings.note_label | default: 'Any instructions for us? (optional)' | escape }}
+      </label>
+      <textarea
+        class="photo-upload__note-input"
+        id="PhotoUploadNote-{{ section_id }}-{{ block.id }}"
+        name="properties[{{ block.settings.note_property_label | default: 'Instructions' | escape }}]"
+        form="{{ product_form_id }}"
+        maxlength="500"
+        rows="3"
+      ></textarea>
+    </div>
+  {%- endif -%}
+
+  {% comment %}
+    Hidden (underscore-prefixed) property: not shown to the customer in cart or
+    on the order confirmation, but visible to staff on the order in the admin
+    so production knows how the customer framed the photo.
+  {% endcomment %}
+  <input
+    type="hidden"
+    name="properties[_Print position]"
+    form="{{ product_form_id }}"
+    data-photo-position
+    disabled
+  >
+</photo-upload>

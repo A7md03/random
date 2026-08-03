@@ -491,6 +491,12 @@
                     block: block,
                     product_form_id: product_form_id
                   %}
+                {%- when 'photo_upload' -%}
+                  {%- render 'photo-upload',
+                    block: block,
+                    product_form_id: product_form_id,
+                    section_id: section.id
+                  -%}
                 {%- when 'buy_buttons' -%}
                   {%- render 'buy-buttons',
                     block: block,
@@ -919,6 +925,107 @@
             }
           ],
           "default": "circle"
+        }
+      ]
+    },
+    {
+      "type": "photo_upload",
+      "name": "Customer photo upload",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Lets the customer attach their own photo to the order. The file is saved on the order in the admin, so no app is needed. Shopify accepts files up to 20 MB."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Upload your photo"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Pick the photo you want printed on your case. Use the biggest, sharpest version you have — screenshots and photos saved from chat apps often print blurry.</p>"
+        },
+        {
+          "type": "text",
+          "id": "property_label",
+          "label": "Order property name",
+          "default": "Your photo",
+          "info": "Shown next to the file on the cart, the order confirmation and the order in the admin. Keep it unique if you add two upload blocks."
+        },
+        {
+          "type": "checkbox",
+          "id": "require_photo",
+          "label": "Require a photo before adding to cart",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "max_file_size",
+          "label": "Maximum file size",
+          "unit": "MB",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "default": 20,
+          "info": "Shopify rejects anything above 20 MB."
+        },
+        {
+          "type": "text",
+          "id": "file_extensions",
+          "label": "Accepted file types",
+          "default": "jpg,jpeg,png,webp,heic,heif",
+          "info": "Comma separated, no dots or spaces."
+        },
+        {
+          "type": "header",
+          "content": "Print quality warning"
+        },
+        {
+          "type": "range",
+          "id": "min_width",
+          "label": "Minimum width",
+          "unit": "px",
+          "min": 0,
+          "max": 4000,
+          "step": 100,
+          "default": 1000
+        },
+        {
+          "type": "range",
+          "id": "min_height",
+          "label": "Minimum height",
+          "unit": "px",
+          "min": 0,
+          "max": 4000,
+          "step": 100,
+          "default": 1500,
+          "info": "Smaller photos still upload — the customer just gets a warning that the print may look soft. Set both to 0 to turn the warning off."
+        },
+        {
+          "type": "header",
+          "content": "Note from the customer"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_note",
+          "label": "Show a note field",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "note_label",
+          "label": "Note field label",
+          "default": "Any instructions for us? (optional)"
+        },
+        {
+          "type": "text",
+          "id": "note_property_label",
+          "label": "Note order property name",
+          "default": "Instructions"
         }
       ]
     },

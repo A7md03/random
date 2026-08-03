@@ -1,0 +1,323 @@
+/* Customer photo upload (custom-printed products) */
+
+.photo-upload {
+  display: block;
+  margin: 1.6rem 0 2.4rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.16);
+  padding: 1.6rem;
+}
+
+/* The component lays out with flex/grid, which would otherwise win over the
+   `hidden` attribute's UA display: none. */
+.photo-upload [hidden] {
+  display: none !important;
+}
+
+.photo-upload__heading {
+  margin: 0 0 0.4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+.photo-upload__description {
+  margin: 0 0 1.4rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgba(var(--color-foreground), 0.72);
+}
+
+.photo-upload__description > :last-child {
+  margin-bottom: 0;
+}
+
+.photo-upload__required-mark {
+  color: var(--photo-upload-alert-color, #8a0303);
+}
+
+/* Dropzone */
+
+.photo-upload__dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 2.4rem 1.6rem;
+  background-color: rgba(var(--color-foreground), 0.03);
+  border: 0.2rem dashed rgba(var(--color-foreground), 0.28);
+  border-radius: var(--inputs-radius, 0);
+  color: rgb(var(--color-foreground));
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--duration-short, 0.1s) ease, background-color var(--duration-short, 0.1s) ease;
+}
+
+.photo-upload__dropzone:hover,
+.photo-upload__dropzone--active {
+  border-color: rgba(var(--color-foreground), 0.75);
+  background-color: rgba(var(--color-foreground), 0.06);
+}
+
+.photo-upload__dropzone:focus-within,
+.photo-upload__dropzone:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.6);
+  outline-offset: 0.2rem;
+}
+
+.photo-upload__dropzone--compact {
+  padding: 1.2rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.photo-upload__dropzone--compact .photo-upload__dropzone-icon,
+.photo-upload__dropzone--compact .photo-upload__dropzone-hint,
+.photo-upload__dropzone--compact .photo-upload__dropzone-label--select,
+.photo-upload__dropzone-label--change {
+  display: none;
+}
+
+.photo-upload__dropzone--compact .photo-upload__dropzone-label--change {
+  display: block;
+}
+
+.photo-upload__dropzone-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: rgba(var(--color-foreground), 0.55);
+}
+
+.photo-upload__dropzone-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.photo-upload__dropzone-label u {
+  text-underline-offset: 0.3rem;
+}
+
+.photo-upload__dropzone-hint {
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.photo-upload__input {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Preview */
+
+.photo-upload__preview {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.photo-upload__frame {
+  position: relative;
+  aspect-ratio: 1 / 2;
+  overflow: hidden;
+  background-color: rgba(var(--color-foreground), 0.08);
+  border-radius: 1.6rem;
+  box-shadow: 0 0 0 0.2rem rgba(var(--color-foreground), 0.85) inset;
+  cursor: grab;
+  touch-action: none;
+}
+
+.photo-upload__frame--dragging {
+  cursor: grabbing;
+}
+
+.photo-upload__frame--empty {
+  cursor: default;
+}
+
+.photo-upload__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(var(--photo-upload-x, 0), var(--photo-upload-y, 0)) scale(var(--photo-upload-zoom, 1));
+  transform-origin: center;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* Camera cut-out + trim guide drawn over the photo so the customer can see
+   roughly what the case will look like once printed. */
+.photo-upload__frame::before {
+  content: '';
+  position: absolute;
+  top: 6%;
+  inset-inline-start: 8%;
+  width: 34%;
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem;
+  background-color: rgba(13, 13, 13, 0.55);
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.photo-upload__frame::after {
+  content: '';
+  position: absolute;
+  inset: 4%;
+  border: 0.1rem dashed rgba(255, 255, 255, 0.7);
+  border-radius: 1.2rem;
+  pointer-events: none;
+}
+
+.photo-upload__frame--empty::before,
+.photo-upload__frame--empty::after {
+  display: none;
+}
+
+.photo-upload__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.photo-upload__filename {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.photo-upload__filemeta {
+  margin: 0;
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+/* Adjustments */
+
+.photo-upload__adjustments {
+  margin-top: 0.4rem;
+}
+
+.photo-upload__zoom-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.72);
+}
+
+.photo-upload__zoom {
+  width: 100%;
+  max-width: 22rem;
+  accent-color: rgb(var(--color-foreground));
+}
+
+.photo-upload__drag-hint {
+  margin: 0.4rem 0 0;
+  font-size: 1.1rem;
+  color: rgba(var(--color-foreground), 0.55);
+}
+
+.photo-upload__remove {
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  color: rgba(var(--color-foreground), 0.75);
+  cursor: pointer;
+}
+
+.photo-upload__remove:hover {
+  color: rgb(var(--color-foreground));
+}
+
+/* Messages */
+
+.photo-upload__message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1.2rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.photo-upload__message .svg-wrapper {
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.1rem;
+}
+
+.photo-upload__message--error {
+  color: var(--photo-upload-alert-color, #8a0303);
+  font-weight: 600;
+}
+
+.photo-upload__message--warning {
+  color: rgba(var(--color-foreground), 0.8);
+}
+
+/* Optional note field */
+
+.photo-upload__note {
+  margin-top: 1.6rem;
+}
+
+.photo-upload__note-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.72);
+}
+
+.photo-upload__note-input {
+  width: 100%;
+  min-height: 7rem;
+  padding: 1rem 1.2rem;
+  background-color: rgb(var(--color-background));
+  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+  border-radius: var(--inputs-radius, 0);
+  color: rgb(var(--color-foreground));
+  font-family: inherit;
+  font-size: 1.4rem;
+}
+
+/* While a photo is still required, the dynamic checkout button has to be
+   blocked too — it submits the form without going through product-form.js. */
+.product-form--photo-required .shopify-payment-button {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 480px) {
+  .photo-upload__preview {
+    grid-template-columns: 9.6rem 1fr;
+  }
+}
+
+/* RTL: the layout is built from logical properties, only the dashed dropzone
+   copy needs its alignment restated. */
+
+[dir='rtl'] .photo-upload,
+[dir='rtl'] .photo-upload__dropzone {
+  text-align: right;
+}
+
+[dir='rtl'] .photo-upload__dropzone {
+  text-align: center;
+}
